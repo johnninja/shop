@@ -278,3 +278,37 @@ input[type=button] {
   display: block;
   clear: both;
 }
+.button {
+  display: inline-block;
+  padding: 0.125rem;
+  color: #fff;
+  -webkit-appearance: none;
+  border-width: 0;
+  border-radius: 0;
+  font-size: 14px;
+  user-select: none;
+}
+[data-dpr="2"] .button {
+  font-size: 28px;
+}
+[data-dpr="3"] .button {
+  font-size: 42px;
+}
+.button:focus {
+  outline: none;
+}
+.button.primary {
+  background-color: blue;
+}
+.button.red {
+  background-color: red;
+}
+.button.small {
+  padding: 0.05rem;
+}
+.header {
+  display: flex;
+  height: 1.2rem;
+  border-bottom: 0.013333rem solid gray;
+  background: url('../../assets/images/hello.png');
+}

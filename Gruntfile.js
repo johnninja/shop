@@ -15,7 +15,7 @@ module.exports = function(grunt){
 			production: {
 				options: {
 					plugins: [
-						new (require('less-plugin-autoprefix'))({browsers: ['last 2 version']}),
+						new (require('less-plugin-autoprefix'))(),
 						new (require('less-plugin-clean-css'))({advance: true})
 					],
 					modifyVars: {
