@@ -2,17 +2,38 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">     
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">     
 	<meta content="yes" name="apple-mobile-web-app-capable">
 	<meta content="black" name="apple-mobile-web-app-status-bar-style">     
 	<meta content="telephone=no" name="format-detection">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Document</title>
 	<link rel="stylesheet" href="src/styles/style.css">
+	<link rel="stylesheet" href="assets/styles/iconfont/iconfont.css">
 	<script data-main="assets/javascripts/index.js" src="./bower_components/requirejs/require.js"></script>
 </head>
 <body>
-	<div class="header">hhh</div>
-	<button class="button red small">按钮</button>
+	<div class="header home-page">
+		<div class="left">
+			<a href="#"><i class="icon iconfont icon-llmainpageback"></i></a>
+		</div>
+		<div class="title">title</div>
+		<div class="right">right</div>
+	</div>
+	<button class="button red">hello</button>
+	<button class="button black">hello</button>
+	<div class="radio">
+		<input type="radio">
+		<label for="">test</label>
+	</div>
+	<div class="checkbox">
+		<input type="checkbox">
+		<label for="">test</label>
+	</div>
+	<div class="compute-box">
+		<div class="minus clickable">-</div>
+		<div class="shower">123</div>
+		<div class="plus clickable">+</div>
+	</div>
 </body>
 </html>
