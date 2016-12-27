@@ -44,6 +44,9 @@ module.exports = function(grunt){
 			}
 		},
 		watch: {
+			options: {
+				livereload: 1337
+			},
 			scripts: {
 				files: '**/*.js',
 				tasks: ['jshint'],
@@ -53,10 +56,7 @@ module.exports = function(grunt){
 			},
 			less: {
 				files: 'src/less/*',
-				tasks: ['less:development'],
-				options: {
-					livereload: true
-				}
+				tasks: ['less:development']
 			}
 		}
 	});

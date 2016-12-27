@@ -1,7 +1,8 @@
 require.config({
 	paths: {
 		'lib': 'lib',
-		'zepto': '../../bower_components/zepto/zepto.min'
+		'zepto': '../../bower_components/zepto/zepto.min',
+		'IScroll': '../../bower_components/iscroll/build/iscroll'
 	},
 	shim: {
 		'lib': {
@@ -12,6 +13,6 @@ require.config({
 		}
 	}
 });
-require(['zepto','lib'], function($, lib){
-	console.log(lib);
+require(['zepto','lib','IScroll', 'load'], function($, lib, IScroll, initScroll){
+	initScroll();
 });
