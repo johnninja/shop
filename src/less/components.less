@@ -4,11 +4,11 @@
 //basic components
 .button{
 	display: inline-block;
-	padding: 0.125rem;
+	padding: 0.3125rem 0.78125rem;
 	color: #fff;
 	-webkit-appearance: none;
 	border-width: 0;
-	border-radius: 0;
+	border-radius: 0.15625rem;
 	.font-dpr(14px);
 	user-select: none;
 	&:focus{
@@ -18,27 +18,119 @@
 		background-color: blue;
 	}
 	&.red{
-		background-color: red;
+		background-color: @red;
+	}
+	&.black{
+		background-color: @dark;
 	}
 	&.small{
 		padding: 0.05rem;
 	}
 }
-
+.radio, .checkbox{
+	position: relative;
+	display: inline-block;
+	input[type="radio"], input[type="checkbox"]{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 17px;
+		height: 17px;
+		opacity: 0;
+		vertical-align: middle;
+		&+label{
+			display: inline-block;
+			height: 17px;
+			line-height: 17px;
+			padding-left: 20px;
+			vertical-align: middle;
+			.font-dpr(14px);
+			color: @dark-gray;
+		}
+		&+label::after, &+label::before{
+			position: absolute;
+			left: 0;
+			top: 0;
+			content: '';
+			display: block;
+			width: 17px;
+			height: 17px;
+			border: 1px solid @dark;
+			border-radius: 50%;
+			box-sizing: border-box;
+			z-index: -1;
+		}
+		&+label::before{
+			width: 13px;
+			height: 13px;
+			left: 2px;
+			top: 2px;
+		}
+		&:checked{
+			&+label::before{
+				background-color: @dark;
+			}
+		}
+	}
+}
+.checkbox{
+	input[type="checkbox"]{
+		width: 15px;
+		height: 15px;
+		&+label::after, &+label::before{
+			width: 15px;
+			height: 15px;
+			border-radius: 0.0625rem;
+		}
+		&+label::before{
+			border: none;
+		}
+		&:checked+label::before{
+			left: 0;
+			top: 0;
+			background: url('@{imgPath}/checkbox.png') no-repeat center center;
+			background-size: contain;
+		}
+	}
+}
 
 //hight-level components
 .header{
 	display: flex;
-	height: 1.2rem;
-	border-bottom: 0.013333rem solid @border-color;
-	background: url('@{imgPath}/hello.png');
-	.font-dpr(16px);
+	height: 1.40625rem;
+	line-height: 1.40625rem;
+	border-bottom: 0.03125rem solid @border-color;
 	text-align: center;
-	line-height: 1.2rem;
-	.left,.right{
-		width: 1.2rem;
+	.right, .left{
+		width: 1.40625rem;
+		.font-dpr(16px);
 	}
 	.title{
+		flex: 1;
+		.font-dpr(16px);
+	}
+}
+.compute-box{
+	display: flex;
+	width: 2.1875rem;
+	.font-dpr(12px);
+	line-height: 0.5rem;
+	background-color: #fff;
+	text-align: center;
+	border: 1px solid #cacaca;
+	color: @dark;
+	.minus, .plus{
+		width: 0.5rem;
+		height: 0.5rem;
+		background-color: #ededed;
+	}
+	.minus{
+		border-right: 1px solid #cacaca;
+	}
+	.plus{
+		border-left: 1px solid #cacaca;
+	}
+	.shower{
 		flex: 1;
 	}
 }
