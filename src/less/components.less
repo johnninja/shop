@@ -1,6 +1,7 @@
 @import url(variables);
 @import url(functions);
 
+//basic components
 .button{
 	display: inline-block;
 	padding: 0.125rem;
@@ -23,9 +24,21 @@
 		padding: 0.05rem;
 	}
 }
+
+
+//hight-level components
 .header{
 	display: flex;
 	height: 1.2rem;
 	border-bottom: 0.013333rem solid @border-color;
 	background: url('@{imgPath}/hello.png');
+	.font-dpr(16px);
+	text-align: center;
+	line-height: 1.2rem;
+	.left,.right{
+		width: 1.2rem;
+	}
+	.title{
+		flex: 1;
+	}
 }

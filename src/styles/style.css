@@ -311,4 +311,20 @@ input[type=button] {
   height: 1.2rem;
   border-bottom: 0.013333rem solid gray;
   background: url('../../assets/images/hello.png');
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.2rem;
+}
+[data-dpr="2"] .header {
+  font-size: 32px;
+}
+[data-dpr="3"] .header {
+  font-size: 48px;
+}
+.header .left,
+.header .right {
+  width: 1.2rem;
+}
+.header .title {
+  flex: 1;
 }
