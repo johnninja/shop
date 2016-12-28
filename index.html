@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">     
+	<meta charset="UTF-8"> 
 	<meta content="yes" name="apple-mobile-web-app-capable">
 	<meta content="black" name="apple-mobile-web-app-status-bar-style">     
 	<meta content="telephone=no" name="format-detection">
@@ -11,37 +10,9 @@
 	<link rel="stylesheet" href="src/styles/style.css">
 	<link rel="stylesheet" href="assets/styles/iconfont/iconfont.css">
 	<script type="text/javascript" src="http://localhost:1337/livereload.js"></script>
-	<script data-main="assets/javascripts/index.js" src="./bower_components/requirejs/require.js"></script>
-	<style type="text/css">
-		p{
-			height: 45px;
-			border-top: 1px solid #ccc;
-		}
-	</style>
+	<script data-main="assets/javascripts/home.js" src="./bower_components/requirejs/require.js"></script>
 </head>
 <body>
-	<!-- <div class="header home-page">
-		<div class="left">
-			<a href="#"><i class="icon iconfont icon-llmainpageback"></i></a>
-		</div>
-		<div class="title">title1111</div>
-		<div class="right">right</div>
-	</div>
-	<button class="button red">hello</button>
-	<button class="button black">hello</button>
-	<div class="radio">
-		<input type="radio">
-		<label for="">test</label>
-	</div>
-	<div class="checkbox">
-		<input type="checkbox">
-		<label for="">test</label>
-	</div>
-	<div class="compute-box">
-		<div class="minus clickable">-</div>
-		<div class="shower">123</div>
-		<div class="plus clickable">+</div>
-	</div> -->
 	<div id="scroll-wrapper">
 		<div>
 			<div class="header home-page">
@@ -55,38 +26,98 @@
 					</div>
 				</div>
 				<div class="right">
-					<div class="scan">扫描</div>
+					<div class="scan clickable">扫描</div>
 				</div>
 			</div>
 			<div class="main">
 				<img src="./assets/images/homepage.jpg" alt="">
 			</div>
+			<div class="floor-title">
+				<h2>特<em>色</em>·产品</h2>
+			</div>
 			<div class="content">
-				<p>323232</p>
-				<p>323232</p>
-				<p>323232</p>
-				<p>323232</p>
-				<p>323232</p>
-				<p>323232</p>
-				<p>323232</p>
-				<p>323232</p>
-				<p>323232</p>
-				<p>323232</p>
-				<p>323232</p>
-				<p>323232</p>
-				<p>323232</p>
-				<p>323232</p>
-				<p>323232</p>
-				<p>323232</p>
-				<p>323232</p>
-				<p>323232</p>
-				<p>323232</p>
-				<p>323232快</p>
+				<div class="grid floor">
+					<div class="card column two">
+						<a href="#">
+							<div class="card-header">
+								<img src="" alt="">
+							</div>
+							<div class="card-footer">
+								<div class="p-name">生·瓷器</div>
+								<div class="p-category">手工艺品</div>
+								<div class="p-price">¥123</div>
+							</div>
+						</a>
+					</div>
+					<div class="card column two">
+						<a href="#">
+							<div class="card-header">
+								<img src="" alt="">
+							</div>
+							<div class="card-footer">
+								<div class="p-name">生·瓷器</div>
+								<div class="p-category">手工艺品</div>
+								<div class="p-price">¥123</div>
+							</div>
+						</a>
+					</div>
+					<div class="card column two">
+						<a href="#">
+							<div class="card-header">
+								<img src="" alt="">
+							</div>
+							<div class="card-footer">
+								<div class="p-name">生·瓷器</div>
+								<div class="p-category">手工艺品</div>
+								<div class="p-price">¥123</div>
+							</div>
+						</a>
+					</div>
+					<div class="card column two">
+						<a href="#">
+							<div class="card-header">
+								<img src="" alt="">
+							</div>
+							<div class="card-footer">
+								<div class="p-name">生·瓷器</div>
+								<div class="p-category">手工艺品</div>
+								<div class="p-price">¥123</div>
+							</div>
+						</a>
+					</div>
+					<div class="card column two">
+						<a href="#">
+							<div class="card-header">
+								<img src="" alt="">
+							</div>
+							<div class="card-footer">
+								<div class="p-name">生·瓷器</div>
+								<div class="p-category">手工艺品</div>
+								<div class="p-price">¥123</div>
+							</div>
+						</a>
+					</div>
+					<div class="card column two">
+						<a href="#">
+							<div class="card-header">
+								<img src="" alt="">
+							</div>
+							<div class="card-footer">
+								<div class="p-name">生·瓷器</div>
+								<div class="p-category">手工艺品</div>
+								<div class="p-price">¥123</div>
+							</div>
+						</a>
+					</div>
+				</div>
 				<div class="loader">
 					<p><i class="loader-icon"></i><span>上拉加载更多</span></p>
 				</div>
 			</div>
 		</div>
+	</div>
+	<div class="footer-wrapper">
+		<div class="footer"></div>
 	</div>
 </body>
 </html>

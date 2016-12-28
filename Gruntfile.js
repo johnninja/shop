@@ -28,8 +28,9 @@ module.exports = function(grunt){
 			}
 		},
 		jshint: {
-			all: ['src/**/*.js'],
+			all: ['./assets/**/*.js'],
 			options: {
+				ignores: ['./assets/**/lib.js'],
 				browser: true,
 			}
 		},

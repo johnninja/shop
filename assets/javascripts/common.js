@@ -13,6 +13,3 @@ require.config({
 		}
 	}
 });
-require(['zepto','lib','IScroll', 'load'], function($, lib, IScroll, initScroll){
-	initScroll();
-});
