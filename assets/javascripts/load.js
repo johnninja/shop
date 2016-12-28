@@ -1,5 +1,5 @@
 define(['IScroll','zepto'],function(IScroll, $){
-	var myScroll;
+	var myScroll, carouselScroll;
 	var loading = $('.loader');
 	var testTemp = '<div class="card column two">'+
 		'<a href="#">'+
@@ -19,6 +19,7 @@ define(['IScroll','zepto'],function(IScroll, $){
 			probeType: 3,
 			preventDefault: false
 		});
+
 		myScroll.scrollToElement('body');
 
 		myScroll.on('scroll', function(){

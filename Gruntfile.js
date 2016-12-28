@@ -30,7 +30,7 @@ module.exports = function(grunt){
 		jshint: {
 			all: ['./assets/**/*.js'],
 			options: {
-				ignores: ['./assets/**/lib.js'],
+				ignores: ['./assets/**/lib.js','./assets/**/plugins/**/*.js'],
 				browser: true,
 			}
 		},

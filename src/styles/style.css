@@ -410,6 +410,7 @@ input[type=button] {
   line-height: 1.40625rem;
   border-bottom: 0.03125rem solid #bcbcbc;
   text-align: center;
+  align-items: center;
 }
 .header .right,
 .header .left {
@@ -425,6 +426,7 @@ input[type=button] {
   font-size: 48px;
 }
 .header .title {
+  padding: 0 0.3125rem;
   flex: 1;
   font-size: 16px;
 }
@@ -468,23 +470,23 @@ input[type=button] {
 .loader {
   height: 1.40625rem;
   line-height: 1.40625rem;
-  font-size: 14px;
+  font-size: 12px;
   text-align: center;
   color: #b3b3b3;
   vertical-align: middle;
 }
 [data-dpr="2"] .loader {
-  font-size: 28px;
+  font-size: 24px;
 }
 [data-dpr="3"] .loader {
-  font-size: 42px;
+  font-size: 36px;
 }
 .loader .loader-icon {
   display: inline-block;
   position: relative;
   margin-right: 0.15625rem;
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 0.333333rem;
+  height: 0.333333rem;
   line-height: normal;
   vertical-align: middle;
   background: url('../../assets/images/loading.png') no-repeat center center;
@@ -509,11 +511,13 @@ input[type=button] {
 .search {
   position: relative;
   display: inline-block;
+  width: 100%;
+  line-height: normal;
 }
 .search .icon {
   position: absolute;
   left: 0.15625rem;
-  top: 0.5rem;
+  top: 1px;
   width: 0.625rem;
   height: 0.625rem;
   background: url('../../assets/images/white-zoom.png') no-repeat center center;
@@ -523,6 +527,7 @@ input[type=button] {
   padding-left: 0.9375rem;
   width: 100%;
   height: 0.625rem;
+  line-height: 0.625rem;
   border: none;
   background-color: #aca094;
   border-radius: 0.625rem;
@@ -542,6 +547,7 @@ input[type=button] {
   color: #fff;
 }
 .floor-title {
+  padding: 0.46875rem 0.3125rem 0.3125rem;
   font-size: 16px;
   font-weight: normal;
   color: #000;
@@ -553,27 +559,31 @@ input[type=button] {
   font-size: 48px;
 }
 .floor-title em {
+  padding: 0 0.066667rem;
   font-style: normal;
   background-color: #d90116;
   color: #fff;
+}
+.card {
+  width: 5.0rem;
 }
 .card a {
   display: block;
   text-decoration: none;
 }
 .card .card-header {
-  height: 4.0rem;
+  height: 2.933333rem;
   background-color: #eaeaea;
 }
 .card .card-header img {
+  width: 100%;
   max-width: 100%;
   max-height: 100%;
   vertical-align: top;
 }
 .card .card-footer {
   display: flex;
-  padding: 0.266667rem 0;
-  height: 0.533333rem;
+  padding: 0.266667rem 0 0;
   justify-content: space-between;
   align-items: baseline;
 }
@@ -619,11 +629,11 @@ input[type=button] {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: stretch;
-  margin: -0.266667rem;
+  margin: -0.16rem;
 }
 .grid > .column {
   display: inline-block;
-  padding: 0.266667rem;
+  padding: 0.16rem;
   vertical-align: top;
 }
 .grid > .column.two {
@@ -643,10 +653,47 @@ input[type=button] {
   bottom: 0;
   left: 0;
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 1.2rem;
   background-color: #fff;
   border-top: 1px solid #bcbcbc;
+}
+.footer-wrapper .footer .tab {
+  display: block;
+  flex: 1;
+  height: inherit;
+  line-height: 1.40625rem;
+  color: #b3b3b3;
+  text-decoration: none;
+  text-align: center;
+}
+.footer-wrapper .footer .tab i.iconfont {
+  font-size: 20px;
+}
+[data-dpr="2"] .footer-wrapper .footer .tab i.iconfont {
+  font-size: 40px;
+}
+[data-dpr="3"] .footer-wrapper .footer .tab i.iconfont {
+  font-size: 60px;
+}
+.footer-wrapper .footer .tab.active {
+  color: #aca094;
+}
+.footer-wrapper .footer .tab.notify i {
+  position: relative;
+}
+.footer-wrapper .footer .tab.notify i::after {
+  display: block;
+  content: '';
+  width: 0.125rem;
+  height: 0.125rem;
+  border-radius: 0.125rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #d90116;
 }
 @keyframes loading {
   0% {
@@ -681,13 +728,13 @@ body {
   font-size: 42px;
 }
 .home-page.header .left a {
-  display: block;
   width: 100%;
   height: 100%;
   color: #717171;
   text-decoration: none;
   overflow: hidden;
   text-overflow: ellipsis;
+  vertical-align: middle;
 }
 .home-page.header .right {
   width: 1.5625rem;
@@ -711,7 +758,24 @@ body {
   width: 100%;
   overflow: hidden;
 }
+.content {
+  max-width: 10.0rem;
+  margin-left: auto;
+  margin-right: auto;
+}
 .floor {
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.swiper-slide img {
+  width: 100%;
+}
+.swiper-pagination-bullet {
+  width: 0.2rem;
+  height: 0.2rem;
+  background: transparent;
+  border: 1px solid #fff;
+}
+.swiper-pagination-bullet-active {
+  background: #fff;
 }
