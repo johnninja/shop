@@ -7,7 +7,6 @@ define(['zepto','./citysdata'], function($, MSCitys){
 		var CityPickBlock = "";
 
 		CityPickBlock += '<div class="citycontainer">';
-		CityPickBlock += '<div id="cityblank" style="width: 100%; height: 60%;"></div>';
 		CityPickBlock += '<div id="citycontent" style="width: 100%; height: 250px;">';
 		CityPickBlock += '<div class="pick-toolbar">';
 		CityPickBlock += '<div id="btn_citycancel">取消</div>';
@@ -48,11 +47,11 @@ define(['zepto','./citysdata'], function($, MSCitys){
 
 			};
 
-			$("#cityblank").height(CityConfig.height - 250);
-			$("#cityblank").on('tap', function(e) {
-				e.preventDefault();
-				e.stopPropagation();
-			});
+			// $("#cityblank").height(CityConfig.height - 250);
+			// $("#cityblank").on('tap', function(e) {
+			// 	e.preventDefault();
+			// 	e.stopPropagation();
+			// });
 			$("#btn_cityok").click(function(e) {
 				e.preventDefault();
 				e.stopPropagation();

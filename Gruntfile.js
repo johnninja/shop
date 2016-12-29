@@ -9,7 +9,8 @@ module.exports = function(grunt){
 			},
 			development: {
 				files: {
-					'src/styles/style.css': 'src/less/style.less'
+					'src/styles/style.css': 'src/less/style.less',
+					'assets/javascripts/plugins/city-picker/citypicker.css': 'src/less/citypicker.less'
 				}
 			},
 			production: {
@@ -30,7 +31,7 @@ module.exports = function(grunt){
 		jshint: {
 			all: ['./assets/**/*.js'],
 			options: {
-				ignores: ['./assets/**/lib.js','./assets/**/plugins/**/*.js'],
+				ignores: ['./assets/javascripts/libs/**.js','./assets/**/plugins/**/*.js'],
 				browser: true,
 			}
 		},

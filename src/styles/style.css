@@ -714,11 +714,13 @@ body {
   line-height: 1.5625rem;
 }
 .home-page.header .left {
-  padding-left: 0.625rem;
+  padding-left: 0.266667rem;
   width: auto;
   max-width: 3.125rem;
   height: 1.5625rem;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 14px;
 }
 [data-dpr="2"] .home-page.header .left {
@@ -732,8 +734,6 @@ body {
   height: 100%;
   color: #717171;
   text-decoration: none;
-  overflow: hidden;
-  text-overflow: ellipsis;
   vertical-align: middle;
 }
 .home-page.header .right {

@@ -9,19 +9,19 @@ body{
 	height: 1.5625rem;
 	line-height: 1.5625rem;
 	.left{
-		padding-left: 0.625rem;
+		padding-left:0.266667rem;
 		width: auto;
 		max-width: 3.125rem;
 		height: 1.5625rem;
 		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
 		.font-dpr(14px);
 		a{
 			width: 100%;
 			height: 100%;
 			color: @dark-gray;
 			text-decoration: none;
-			overflow: hidden;
-			text-overflow: ellipsis;
 			vertical-align: middle;
 		}
 	}
@@ -37,6 +37,7 @@ body{
 		text-indent: -9999999px;
 	}
 }
+
 .main{
 	img{
 		width: 100%;
