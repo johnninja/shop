@@ -1,5 +1,5 @@
-define(['zepto','./citysdata'], function($, MSCitys){
-
+define(['zepto','./citysdata', 'lib'], function($, MSCitys, lib){
+	
 	var CityPickData = [];
 	var AreaPickData = [];
 
@@ -7,7 +7,7 @@ define(['zepto','./citysdata'], function($, MSCitys){
 		var CityPickBlock = "";
 
 		CityPickBlock += '<div class="citycontainer">';
-		CityPickBlock += '<div id="citycontent" style="width: 100%; height: 250px;">';
+		CityPickBlock += '<div id="citycontent" style="width: 100%; height: 6.666667rem;">';
 		CityPickBlock += '<div class="pick-toolbar">';
 		CityPickBlock += '<div id="btn_citycancel">取消</div>';
 		CityPickBlock += '<div id="btn_cityok">完成</div>';
@@ -65,7 +65,7 @@ define(['zepto','./citysdata'], function($, MSCitys){
 				e.stopPropagation();
 				$(".citycontainer").remove();
 			})
-			$(".highlightbar").css("top", "90px");
+			$(".highlightbar").css("top", "2.4rem");
 
 			$("#provenceitem").unbind();
 			CityConfig.ProTsY = 0;
