@@ -74,3 +74,107 @@ body{
 .swiper-pagination-bullet-active{
 	background: #fff;
 }
+
+//brand
+.brand{
+	.tabs{
+		display: flex;
+		height: 1.6rem;
+		background-color: #fff;
+		align-items: center;
+		justify-content: center;
+		.tab{
+			flex: 1;
+			.font-dpr(16px);
+			text-align: center;
+			a{
+				display: inline-block;
+				padding: 0.266667rem 0.666667rem;
+				color: #323232;
+				text-decoration: none;
+			}
+			&.active > a {
+				color: @red;
+				border-bottom: 1px solid @red;
+			}
+		}
+	}
+	.brand-list, .esthetics-list{
+		li{
+			border-bottom: 1px solid @light-gray;
+		}
+		a{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			.font-dpr(16px);
+			text-decoration: none;
+			color: @dark;
+			&>div{
+				padding: 0.4rem 0.266667rem;
+				flex: 1;
+				text-align: center;
+			}
+			.title{
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+			.border-img{
+				display: inline-block;
+				width: 2.08rem;
+				height: 2.08rem;
+				border-radius: 2.08rem;
+				overflow: hidden;
+			}
+			img{
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+	.esthetics-list{
+		padding-bottom: 0.666667rem;
+		li{
+			border: none;
+		}
+		.link-list{
+			padding: 0.666667rem 0;
+			background-color: #fff;
+			font-size: 0;
+			box-sizing: content-box;
+			overflow: hidden;
+			.item{
+				display: inline-block;
+				padding: 0 0.533333rem;
+				width: 50%;
+				height: 0.973333rem;
+				box-sizing: border-box;
+				text-align: center;
+				&.show-more{
+					text-indent: -999999px;
+					background: url('@{imgPath}/down.png') no-repeat center center;
+					background-size: 0.6rem auto;
+				}
+			}
+			a{
+				display: inline-block;
+				padding: 0.266667rem 0.133333rem;
+				max-width: 100%;
+				.font-dpr(16px);
+				color: @dark-gray;
+				border-bottom: 1px solid @dark-gray;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+			.list-wrap{
+				height: 100%;
+				overflow: hidden;
+			}
+			&.hide{
+				height: 2.933333rem;
+			}
+		}
+	}
+}

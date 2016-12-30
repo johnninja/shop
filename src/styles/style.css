@@ -670,13 +670,13 @@ input[type=button] {
   text-align: center;
 }
 .footer-wrapper .footer .tab i.iconfont {
-  font-size: 20px;
+  font-size: 25px;
 }
 [data-dpr="2"] .footer-wrapper .footer .tab i.iconfont {
-  font-size: 40px;
+  font-size: 50px;
 }
 [data-dpr="3"] .footer-wrapper .footer .tab i.iconfont {
-  font-size: 60px;
+  font-size: 75px;
 }
 .footer-wrapper .footer .tab.active {
   color: #aca094;
@@ -778,4 +778,128 @@ body {
 }
 .swiper-pagination-bullet-active {
   background: #fff;
+}
+.brand .tabs {
+  display: flex;
+  height: 1.6rem;
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
+}
+.brand .tabs .tab {
+  flex: 1;
+  font-size: 16px;
+  text-align: center;
+}
+[data-dpr="2"] .brand .tabs .tab {
+  font-size: 32px;
+}
+[data-dpr="3"] .brand .tabs .tab {
+  font-size: 48px;
+}
+.brand .tabs .tab a {
+  display: inline-block;
+  padding: 0.266667rem 0.666667rem;
+  color: #323232;
+  text-decoration: none;
+}
+.brand .tabs .tab.active > a {
+  color: #d90116;
+  border-bottom: 1px solid #d90116;
+}
+.brand .brand-list li,
+.brand .esthetics-list li {
+  border-bottom: 1px solid #b3b3b3;
+}
+.brand .brand-list a,
+.brand .esthetics-list a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  text-decoration: none;
+  color: #000;
+}
+[data-dpr="2"] .brand .brand-list a,
+[data-dpr="2"] .brand .esthetics-list a {
+  font-size: 32px;
+}
+[data-dpr="3"] .brand .brand-list a,
+[data-dpr="3"] .brand .esthetics-list a {
+  font-size: 48px;
+}
+.brand .brand-list a > div,
+.brand .esthetics-list a > div {
+  padding: 0.4rem 0.266667rem;
+  flex: 1;
+  text-align: center;
+}
+.brand .brand-list a .title,
+.brand .esthetics-list a .title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.brand .brand-list a .border-img,
+.brand .esthetics-list a .border-img {
+  display: inline-block;
+  width: 2.08rem;
+  height: 2.08rem;
+  border-radius: 2.08rem;
+  overflow: hidden;
+}
+.brand .brand-list a img,
+.brand .esthetics-list a img {
+  width: 100%;
+  height: 100%;
+}
+.brand .esthetics-list {
+  padding-bottom: 0.666667rem;
+}
+.brand .esthetics-list li {
+  border: none;
+}
+.brand .esthetics-list .link-list {
+  padding: 0.666667rem 0;
+  background-color: #fff;
+  font-size: 0;
+  box-sizing: content-box;
+  overflow: hidden;
+}
+.brand .esthetics-list .link-list .item {
+  display: inline-block;
+  padding: 0 0.533333rem;
+  width: 50%;
+  height: 0.973333rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+.brand .esthetics-list .link-list .item.show-more {
+  text-indent: -999999px;
+  background: url('../../assets/images/down.png') no-repeat center center;
+  background-size: 0.6rem auto;
+}
+.brand .esthetics-list .link-list a {
+  display: inline-block;
+  padding: 0.266667rem 0.133333rem;
+  max-width: 100%;
+  font-size: 16px;
+  color: #717171;
+  border-bottom: 1px solid #717171;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+[data-dpr="2"] .brand .esthetics-list .link-list a {
+  font-size: 32px;
+}
+[data-dpr="3"] .brand .esthetics-list .link-list a {
+  font-size: 48px;
+}
+.brand .esthetics-list .link-list .list-wrap {
+  height: 100%;
+  overflow: hidden;
+}
+.brand .esthetics-list .link-list.hide {
+  height: 2.933333rem;
 }
