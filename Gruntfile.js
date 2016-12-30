@@ -45,6 +45,15 @@ module.exports = function(grunt){
 				}
 			}
 		},
+		connect: {
+			server: {
+				options: {
+					open: true,
+					hostname: '0.0.0.0',
+					port: '8000'
+				}
+			}
+		},
 		watch: {
 			options: {
 				livereload: 1337
@@ -66,9 +75,10 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-less');
+	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	grunt.registerTask('dev', ['less:development', 'jshint']);
+	grunt.registerTask('dev', ['less:development', 'connect:server', 'jshint']);
 	grunt.registerTask('prod', ['less:production','uglify']);
 	grunt.registerTask('default', ['dev','watch']);
 }
