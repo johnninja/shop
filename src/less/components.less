@@ -11,8 +11,9 @@
 	border-radius: 0.15625rem;
 	.font-dpr(14px);
 	user-select: none;
+	-webkit-tap-highlight-color: transparent;
 	&:focus{
-		outline: none;
+		outline: 0 none;
 	}
 	&.primary{
 		background-color: blue;
@@ -24,7 +25,8 @@
 		background-color: @dark;
 	}
 	&.small{
-		padding: 0.05rem;
+		padding: 0.133333rem 0.266667rem;
+		.font-dpr(12px);
 	}
 }
 .radio, .checkbox{

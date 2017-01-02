@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="assets/styles/iconfont/iconfont.css">
 	<script type="text/javascript" src="http://127.0.0.1:1337/livereload.js"></script>
 	<script type="text/javascript" src="./assets/javascripts/libs/lib.js"></script>
-	<!-- <script data-main="assets/javascripts/demo" src="./bower_components/requirejs/require.js"></script> -->
+	<script data-main="assets/javascripts/shop_cart" src="./bower_components/requirejs/require.js"></script>
 </head>
 <body>
 	<div class="header">
@@ -34,7 +34,40 @@
 				</div>
 			</div>
 			<div class="product-img">
-				<img src="" alt="">
+				<img src="./assets/images/pic.jpg" alt="">
+			</div>
+			<div class="product-info">
+				<div class="product-header">
+					<div class="product-name">
+						<span>名称</span>
+						<small>分类</small>
+					</div>
+					<div class="product-spec">balabalabalabal</div>
+				</div>
+				<div class="product-price">¥12</div>
+				<div class="product-number">
+					<div class="compute-box">
+						<div class="minus clickable">-</div>
+						<div class="shower">12</div>
+						<div class="plus clickable">+</div>
+					</div>
+				</div>
+			</div>
+			<div class="product-delete">
+				<a href="#">
+					<i class="iconfont icon-iconfontshanchu"></i>
+				</a>
+			</div>
+		</div>
+		<div class="product-list">
+			<div class="product-check">
+				<div class="checkbox">
+					<input type="checkbox">
+					<label for=""></label>
+				</div>
+			</div>
+			<div class="product-img">
+				<img src="./assets/images/pic.jpg" alt="">
 			</div>
 			<div class="product-info">
 				<div class="product-header">
@@ -62,45 +95,12 @@
 		<div class="product-list">
 			<div class="product-check">
 				<div class="checkbox">
-					<input type="checkbox">
+					<input type="checkbox" checked>
 					<label for=""></label>
 				</div>
 			</div>
 			<div class="product-img">
-				<img src="" alt="">
-			</div>
-			<div class="product-info">
-				<div class="product-header">
-					<div class="product-name">
-						<span>名称</span>
-						<small>分类</small>
-					</div>
-					<div class="product-spec">balabalabalabal</div>
-				</div>
-				<div class="product-price">¥123</div>
-				<div class="product-number">
-					<div class="compute-box">
-						<div class="minus clickable">-</div>
-						<div class="shower">123</div>
-						<div class="plus clickable">+</div>
-					</div>
-				</div>
-			</div>
-			<div class="product-delete">
-				<a href="#">
-					<i class="iconfont icon-iconfontshanchu"></i>
-				</a>
-			</div>
-		</div>
-		<div class="product-list">
-			<div class="product-check">
-				<div class="checkbox">
-					<input type="checkbox">
-					<label for=""></label>
-				</div>
-			</div>
-			<div class="product-img">
-				<img src="" alt="">
+				<img src="./assets/images/pic.jpg" alt="">
 			</div>
 			<div class="product-info">
 				<div class="product-header">
@@ -202,6 +202,20 @@
 						</div>
 					</a>
 				</div>
+			</div>
+		</div>
+	</div>
+	<div class="checkall-wrap">
+		<div class="checkall">
+			<div class="check-box">
+				<div class="checkbox">
+					<input type="checkbox">
+					<label for="">全部取消</label>
+				</div>
+			</div>
+			<div class="check-price">
+				<span>合计：¥0</span>
+				<button class="button red small">去结算</button>
 			</div>
 		</div>
 	</div>
