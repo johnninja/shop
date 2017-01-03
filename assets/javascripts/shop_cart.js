@@ -1,5 +1,5 @@
 require(['./common'], function(){
-	require(['zepto', './modules/compute'], function($, Compute){
+	require(['zepto', './modules/compute', './modules/checkall'], function($, Compute, CheckAll){
 		
 		var computeBoxes = {};
 		$('.product-list').each(function(index, item){
@@ -29,17 +29,17 @@ require(['./common'], function(){
 			});
 
 		});
-		var checkAllBtn = $('.checkall').find('input[type=checkbox]');
-		checkAllBtn.click(function(e){
-			$('.product-list input[type=checkbox]').each(function(index, item){
-				if (checkAllBtn.is(':checked')) {
-					$(this).attr('checked', true);
-					computeBoxes[index].changeStatus(true);
-				}else{
-					$(this).removeAttr('checked');
-					computeBoxes[index].changeStatus(false);
-				}
-			});
+		var myCheckall = new CheckAll('#select-all');
+		myCheckall.slave('.slave', function(){
+			//全选回调
+			for(var i in computeBoxes){
+				computeBoxes[i].changeStatus(true);
+			}
+		},function(){
+			//反选回调
+			for(var i in computeBoxes){
+				computeBoxes[i].changeStatus(false);
+			}
 		});
 	});
 });
