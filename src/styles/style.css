@@ -307,6 +307,11 @@ input[type=button] {
 .button.black {
   background-color: #000;
 }
+.button.white {
+  background: white;
+  color: #000;
+  border: 1px solid #bcbcbc;
+}
 .button.small {
   padding: 0.133333rem 0.266667rem;
   font-size: 12px;
@@ -333,6 +338,7 @@ input[type=button] {
   height: 0.453333rem;
   opacity: 0;
   vertical-align: middle;
+  z-index: 2;
 }
 .radio input[type="radio"] + label,
 .checkbox input[type="radio"] + label,
@@ -376,7 +382,7 @@ input[type=button] {
   border: 1px solid #000;
   border-radius: 50%;
   box-sizing: border-box;
-  z-index: -1;
+  z-index: 1;
 }
 .radio input[type="radio"] + label::before,
 .checkbox input[type="radio"] + label::before,
@@ -741,6 +747,7 @@ input[type=button] {
   flex: 1;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
 }
 .product-list .product-info .product-name {
   white-space: nowrap;
@@ -792,6 +799,9 @@ input[type=button] {
   display: flex;
   border-bottom: 1px solid #717171;
 }
+.tabs.shadow-tab {
+  box-shadow: 0 0.12rem 0.2rem 0px rgba(0, 0, 0, 0.1);
+}
 .tabs .tab {
   flex: 1;
   text-align: center;
@@ -804,7 +814,46 @@ input[type=button] {
   box-sizing: border-box;
 }
 .tabs .tab.active {
-  border-bottom: 2px solid #d90116;
+  border-bottom: 4px solid #d90116;
+}
+.cancel-reason {
+  margin: 2.16rem 1.093333rem 0;
+  background: #fff;
+}
+.cancel-reason .title {
+  padding: 0 1.173333rem;
+  height: 1.173333rem;
+  line-height: 1.173333rem;
+  font-size: 16px;
+  color: #d90116;
+  border-bottom: 0.133333rem solid #d90116;
+  box-sizing: content-box;
+}
+[data-dpr="2"] .cancel-reason .title {
+  font-size: 32px;
+}
+[data-dpr="3"] .cancel-reason .title {
+  font-size: 48px;
+}
+.cancel-reason .reason-list .item {
+  padding: 0 0.466667rem;
+  height: 1.173333rem;
+  line-height: 1.173333rem;
+  border-bottom: 1px solid #bcbcbc;
+}
+.cancel-reason .reason-list .item .radio {
+  line-height: normal;
+}
+.cancel-reason .reason-list .item .radio label {
+  padding-left: 0.693333rem;
+}
+.cancel-reason .action-buttons {
+  display: flex;
+  padding: 0.266667rem 0;
+  justify-content: space-around;
+}
+.cancel-reason .action-buttons .button {
+  padding: 0.2rem 0.533333rem;
 }
 @keyframes loading {
   0% {
@@ -819,6 +868,15 @@ input[type=button] {
 }
 body {
   background: url('../../assets/images/bg.jpg') repeat;
+}
+.white-bg {
+  background: #fff;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
 }
 .home-page.header {
   height: 1.5625rem;
@@ -1095,4 +1153,75 @@ body {
 }
 .favorite .product-list .product-info .product-price {
   margin-top: 0.266667rem;
+}
+.order {
+  margin-bottom: 0.666667rem;
+  box-shadow: 0 0.12rem 0.2rem 0px rgba(0, 0, 0, 0.1);
+}
+.order-list {
+  position: relative;
+  padding: 0.4rem 0.266667rem 0.2rem;
+  border-bottom: 1px solid #bcbcbc;
+}
+.order-list .product-list {
+  padding: 0.133333rem 0;
+  border-bottom: 0;
+}
+.order-list .product-list .product-info {
+  justify-content: space-around;
+}
+.order-list .product-list .product-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.order-list .order-list-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+[data-dpr="2"] .order-list .order-list-footer {
+  font-size: 28px;
+}
+[data-dpr="3"] .order-list .order-list-footer {
+  font-size: 42px;
+}
+.order-list .order-list-footer span {
+  font-size: 12px;
+  vertical-align: bottom;
+}
+[data-dpr="2"] .order-list .order-list-footer span {
+  font-size: 24px;
+}
+[data-dpr="3"] .order-list .order-list-footer span {
+  font-size: 36px;
+}
+.order-list .order-cancel {
+  position: absolute;
+  right: 0.266667rem;
+  top: 0.2rem;
+}
+.order-list .order-cancel a {
+  text-decoration: none;
+  color: #717171;
+  font-size: 12px;
+}
+[data-dpr="2"] .order-list .order-cancel a {
+  font-size: 24px;
+}
+[data-dpr="3"] .order-list .order-cancel a {
+  font-size: 36px;
+}
+.order-list .product-list-label {
+  margin-left: 0.133333rem;
+  flex: 1;
+  font-size: 12px;
+  color: #717171;
+}
+[data-dpr="2"] .order-list .product-list-label {
+  font-size: 24px;
+}
+[data-dpr="3"] .order-list .product-list-label {
+  font-size: 36px;
 }

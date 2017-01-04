@@ -5,6 +5,16 @@
 body{
 	background: url('@{imgPath}/bg.jpg') repeat;
 }
+.white-bg{
+	background: #fff;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+
 .home-page.header{
 	height: 1.5625rem;
 	line-height: 1.5625rem;
@@ -248,5 +258,52 @@ body{
 				margin-top: 0.266667rem;
 			}
 		}
+	}
+}
+.order{
+	margin-bottom: 0.666667rem;
+	box-shadow: 0 0.12rem 0.2rem 0px rgba(0,0,0,0.1);
+}
+.order-list{
+	position: relative;
+	padding: 0.4rem 0.266667rem 0.2rem;
+	border-bottom: 1px solid @border-color;
+	.product-list{
+		padding: 0.133333rem 0;
+		border-bottom: 0;
+		.product-info{
+			justify-content: space-around;
+		}
+		.product-header{
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+		}
+	}
+	.order-list-footer{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.font-dpr(14px);
+		span{
+			.font-dpr(12px);
+			vertical-align: bottom;
+		}
+	}
+	.order-cancel{
+		position: absolute;
+		right: 0.266667rem;
+		top: 0.2rem;
+		a{
+			text-decoration: none;
+			color: @dark-gray;
+			.font-dpr(12px);
+		}
+	}
+	.product-list-label{
+		margin-left: 0.133333rem;
+		flex: 1;
+		.font-dpr(12px);
+		color: @dark-gray;
 	}
 }

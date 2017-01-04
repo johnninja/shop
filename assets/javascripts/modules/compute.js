@@ -14,17 +14,14 @@ define(function(){
 	Compute.prototype = {
 		constructor: Compute,
 		init: function(){
-			// var price = this.price.text().match(this.reg);
-			// var amount = this.shower.text();
-			// var total = this.total.html();
-			// var value = total.match(this.reg);
-
-			// this.total.html(total.replace(this.reg, Number(price) * Number(amount) + Number(value)));
 			this.bindEvent();
 		},
 		bindEvent: function(){
 			var _this = this;
-			var price = this.price.text().match(this.reg)[0];
+			var price = '';
+			if (this.price) {
+				price = this.price.text().match(this.reg)[0];
+			}
 
 			this.plus.click(function(e){
 				var value = parseInt(_this.shower.text());
@@ -32,7 +29,10 @@ define(function(){
 					return;
 				}
 				_this.increase();
-				_this.updateTotal(price);
+
+				if (_this.price && _this.total) {
+					_this.updateTotal(price);
+				}
 			});
 			this.minus.click(function(e){
 				var value = parseInt(_this.shower.text());
@@ -41,7 +41,10 @@ define(function(){
 					return;
 				}
 				_this.decrease();
-				_this.updateTotal(-price);
+
+				if (_this.price && _this.total) {
+					_this.updateTotal(-price);
+				}
 			});
 		},
 		increase: function(){
