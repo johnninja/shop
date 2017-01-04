@@ -45,6 +45,33 @@ module.exports = function(grunt){
 				}
 			}
 		},
+		copy: {
+			main: {
+				files: [
+					{
+						expand: true,
+						src: ['assets/**'],
+						dest: './build/'
+					},
+					{
+						expand: true,
+						src: ['bower_components/**'],
+						dest: './build/'
+					}
+				]
+			},
+			html: {
+				expand: false,
+				src: ['./*.html'],
+				dest: './build/',
+				options: {
+					process: function(content, srcpath){
+						content.replace(/<script type="text\/javascript" src="http:\/\/127\.0\.0\.1\:1337\/livereload\.js"><\/script>/ig, '');
+						return content.replace(/src\/styles\/style\.css/g, 'assets/styles/style.css');
+					}
+				}
+			}
+		},
 		connect: {
 			server: {
 				options: {
@@ -75,10 +102,12 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-less');
+	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	grunt.registerTask('dev', ['less:development', 'connect:server', 'jshint']);
 	grunt.registerTask('prod', ['less:production','uglify']);
+	grunt.registerTask('build', ['copy']);
 	grunt.registerTask('default', ['dev','watch']);
 }

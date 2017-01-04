@@ -388,3 +388,22 @@
 		}
 	}
 }
+.tabs{
+	padding: 0 0.266667rem;
+	display: flex;
+	border-bottom: 1px solid @dark-gray;
+	.tab{
+		flex: 1;
+		text-align: center;
+		a{
+			padding: 0.266667rem 0;
+			display: block;
+			text-decoration: none;
+			color: @dark;
+			box-sizing: border-box;
+		}
+		&.active{
+			border-bottom: 2px solid @red;
+		}
+	}
+}
