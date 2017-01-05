@@ -7,5 +7,12 @@ require(['./common'], function(){
 				shower: $(item).find('.shower')
 			}).init();
 		});
+		$('.order-cancel a').click(function(e){
+			e.preventDefault();
+			$('.modal').show();
+		});
+		$('.cancel-reason button').click(function(e){
+			$('.modal').hide();
+		});
 	});
 });

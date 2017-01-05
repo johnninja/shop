@@ -51,8 +51,10 @@
 		&+label{
 			display: block;
 			.component-size(padding-left, 23px);
+			.component-size(line-height, 17px);
 			.font-dpr(14px);
 			color: @dark-gray;
+			-webkit-tap-highlight-color: transparent;
 			user-select: none;
 		}
 		&+label::after, &+label::before{
@@ -172,6 +174,7 @@
 	}
 }
 .modal{
+	display: none;
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -291,6 +294,8 @@
 	}
 }
 .footer-wrapper{
+	position: relative;
+	z-index: 1;
 	height: 1.2rem;
 	.footer{
 		position: fixed;
@@ -440,6 +445,66 @@
 		justify-content: space-around;
 		.button{
 			padding: 0.2rem 0.533333rem;
+		}
+	}
+}
+.rate{
+	.star{
+		display: inline-block;
+		width: 0.533333rem;
+		height: 0.533333rem;
+		background: url('@{imgPath}/star.png') no-repeat center center;
+		background-size: cover;
+		vertical-align: middle;
+		&.active{
+			background: url('@{imgPath}/star1.png') no-repeat center center;
+			background-size: cover;
+		}
+	}
+}
+.site-list{
+	padding: 0.266667rem;
+	.font-dpr(16px);
+	border-bottom: 1px solid @border-color;
+	background: rgba(0,0,0,0.05);
+	.user-name{
+		padding: 0.133333rem 0;
+		.phone{
+			margin-left: 0.266667rem;
+			.font-dpr(14px);
+		}
+	}
+	.local-site{
+		padding: 0.133333rem 0;
+		max-height: 100%;
+		.font-dpr(14px);
+	}
+	.site-list-footer{
+		padding-top: 0.266667rem;
+		overflow: hidden;
+		.select-site{
+			float: left;
+		}
+		.operator-site{
+			float: right;
+		}
+		.edit-site, .delete-site{
+			margin-left: 0.266667rem;
+			color: @dark;
+			text-decoration: none;
+			i.iconfont{
+				.font-dpr(16px);
+			}
+		}
+	}
+	.radio{
+		input[type=radio]:checked{
+			&+label{
+				color: @red;
+				&::before{
+					background: @red;
+				}
+			}
 		}
 	}
 }
