@@ -37,42 +37,38 @@
 .radio, .checkbox{
 	position: relative;
 	display: inline-block;
+	.component-size(height, 17px);
+	.component-size(line-height, 17px);
+	vertical-align: baseline;
 	input[type="radio"], input[type="checkbox"]{
 		position: absolute;
 		left: 0;
 		top: 0;
-		width: 0.453333rem;
-		height: 0.453333rem;
+		.component-size(width, 17px);
+		.component-size(height, 17px);
 		opacity: 0;
-		vertical-align: middle;
 		z-index: 2;
 		&+label{
-			display: inline-block;
-			height: 0.453333rem;
-			line-height: 0.453333rem;
-			padding-left: 0.533333rem;
-			vertical-align: middle;
+			display: block;
+			.component-size(padding-left, 23px);
 			.font-dpr(14px);
 			color: @dark-gray;
+			user-select: none;
 		}
 		&+label::after, &+label::before{
 			position: absolute;
 			left: 0;
 			top: 0;
 			content: '';
-			display: block;
-			width: 0.453333rem;
-			height: 0.453333rem;
+			.component-size(height, 17px);
+			.component-size(width, 17px);
 			border: 1px solid @dark;
 			border-radius: 50%;
 			box-sizing: border-box;
 			z-index: 1;
 		}
 		&+label::before{
-			width: 0.346667rem;
-			height: 0.346667rem;
-			left: 0.053333rem;
-			top: 0.053333rem;
+			transform: scale(.46666667);
 		}
 		&:checked{
 			&+label::before{
@@ -83,19 +79,14 @@
 }
 .checkbox{
 	input[type="checkbox"]{
-		width: 0.4rem;
-		height: 0.4rem;
 		&+label::after, &+label::before{
-			width: 0.4rem;
-			height: 0.4rem;
-			border-radius: 0.0625rem;
+			.component-size(border-radius, 2px);
 		}
 		&+label::before{
 			border: none;
+			transform: scale(.8);
 		}
 		&:checked+label::before{
-			left: 0;
-			top: 0;
 			background: url('@{imgPath}/checkbox.png') no-repeat center center;
 			background-size: contain;
 		}

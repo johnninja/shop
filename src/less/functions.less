@@ -7,3 +7,12 @@
 		font-size: @font-size*3;
 	}
 }
+.component-size(@name, @size){
+	@{name}: @size;
+	[data-dpr='2'] & {
+		@{name}: @size*2;
+	}
+	[data-dpr='3'] & {
+		@{name}: @size*3;
+	}
+}

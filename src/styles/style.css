@@ -326,6 +326,25 @@ input[type=button] {
 .checkbox {
   position: relative;
   display: inline-block;
+  height: 17px;
+  line-height: 17px;
+  vertical-align: baseline;
+}
+[data-dpr='2'] .radio,
+[data-dpr='2'] .checkbox {
+  height: 34px;
+}
+[data-dpr='3'] .radio,
+[data-dpr='3'] .checkbox {
+  height: 51px;
+}
+[data-dpr='2'] .radio,
+[data-dpr='2'] .checkbox {
+  line-height: 34px;
+}
+[data-dpr='3'] .radio,
+[data-dpr='3'] .checkbox {
+  line-height: 51px;
 }
 .radio input[type="radio"],
 .checkbox input[type="radio"],
@@ -334,23 +353,56 @@ input[type=button] {
   position: absolute;
   left: 0;
   top: 0;
-  width: 0.453333rem;
-  height: 0.453333rem;
+  width: 17px;
+  height: 17px;
   opacity: 0;
-  vertical-align: middle;
   z-index: 2;
+}
+[data-dpr='2'] .radio input[type="radio"],
+[data-dpr='2'] .checkbox input[type="radio"],
+[data-dpr='2'] .radio input[type="checkbox"],
+[data-dpr='2'] .checkbox input[type="checkbox"] {
+  width: 34px;
+}
+[data-dpr='3'] .radio input[type="radio"],
+[data-dpr='3'] .checkbox input[type="radio"],
+[data-dpr='3'] .radio input[type="checkbox"],
+[data-dpr='3'] .checkbox input[type="checkbox"] {
+  width: 51px;
+}
+[data-dpr='2'] .radio input[type="radio"],
+[data-dpr='2'] .checkbox input[type="radio"],
+[data-dpr='2'] .radio input[type="checkbox"],
+[data-dpr='2'] .checkbox input[type="checkbox"] {
+  height: 34px;
+}
+[data-dpr='3'] .radio input[type="radio"],
+[data-dpr='3'] .checkbox input[type="radio"],
+[data-dpr='3'] .radio input[type="checkbox"],
+[data-dpr='3'] .checkbox input[type="checkbox"] {
+  height: 51px;
 }
 .radio input[type="radio"] + label,
 .checkbox input[type="radio"] + label,
 .radio input[type="checkbox"] + label,
 .checkbox input[type="checkbox"] + label {
-  display: inline-block;
-  height: 0.453333rem;
-  line-height: 0.453333rem;
-  padding-left: 0.533333rem;
-  vertical-align: middle;
+  display: block;
+  padding-left: 23px;
   font-size: 14px;
   color: #717171;
+  user-select: none;
+}
+[data-dpr='2'] .radio input[type="radio"] + label,
+[data-dpr='2'] .checkbox input[type="radio"] + label,
+[data-dpr='2'] .radio input[type="checkbox"] + label,
+[data-dpr='2'] .checkbox input[type="checkbox"] + label {
+  padding-left: 46px;
+}
+[data-dpr='3'] .radio input[type="radio"] + label,
+[data-dpr='3'] .checkbox input[type="radio"] + label,
+[data-dpr='3'] .radio input[type="checkbox"] + label,
+[data-dpr='3'] .checkbox input[type="checkbox"] + label {
+  padding-left: 69px;
 }
 [data-dpr="2"] .radio input[type="radio"] + label,
 [data-dpr="2"] .checkbox input[type="radio"] + label,
@@ -376,22 +428,58 @@ input[type=button] {
   left: 0;
   top: 0;
   content: '';
-  display: block;
-  width: 0.453333rem;
-  height: 0.453333rem;
+  height: 17px;
+  width: 17px;
   border: 1px solid #000;
   border-radius: 50%;
   box-sizing: border-box;
   z-index: 1;
 }
+[data-dpr='2'] .radio input[type="radio"] + label::after,
+[data-dpr='2'] .checkbox input[type="radio"] + label::after,
+[data-dpr='2'] .radio input[type="checkbox"] + label::after,
+[data-dpr='2'] .checkbox input[type="checkbox"] + label::after,
+[data-dpr='2'] .radio input[type="radio"] + label::before,
+[data-dpr='2'] .checkbox input[type="radio"] + label::before,
+[data-dpr='2'] .radio input[type="checkbox"] + label::before,
+[data-dpr='2'] .checkbox input[type="checkbox"] + label::before {
+  height: 34px;
+}
+[data-dpr='3'] .radio input[type="radio"] + label::after,
+[data-dpr='3'] .checkbox input[type="radio"] + label::after,
+[data-dpr='3'] .radio input[type="checkbox"] + label::after,
+[data-dpr='3'] .checkbox input[type="checkbox"] + label::after,
+[data-dpr='3'] .radio input[type="radio"] + label::before,
+[data-dpr='3'] .checkbox input[type="radio"] + label::before,
+[data-dpr='3'] .radio input[type="checkbox"] + label::before,
+[data-dpr='3'] .checkbox input[type="checkbox"] + label::before {
+  height: 51px;
+}
+[data-dpr='2'] .radio input[type="radio"] + label::after,
+[data-dpr='2'] .checkbox input[type="radio"] + label::after,
+[data-dpr='2'] .radio input[type="checkbox"] + label::after,
+[data-dpr='2'] .checkbox input[type="checkbox"] + label::after,
+[data-dpr='2'] .radio input[type="radio"] + label::before,
+[data-dpr='2'] .checkbox input[type="radio"] + label::before,
+[data-dpr='2'] .radio input[type="checkbox"] + label::before,
+[data-dpr='2'] .checkbox input[type="checkbox"] + label::before {
+  width: 34px;
+}
+[data-dpr='3'] .radio input[type="radio"] + label::after,
+[data-dpr='3'] .checkbox input[type="radio"] + label::after,
+[data-dpr='3'] .radio input[type="checkbox"] + label::after,
+[data-dpr='3'] .checkbox input[type="checkbox"] + label::after,
+[data-dpr='3'] .radio input[type="radio"] + label::before,
+[data-dpr='3'] .checkbox input[type="radio"] + label::before,
+[data-dpr='3'] .radio input[type="checkbox"] + label::before,
+[data-dpr='3'] .checkbox input[type="checkbox"] + label::before {
+  width: 51px;
+}
 .radio input[type="radio"] + label::before,
 .checkbox input[type="radio"] + label::before,
 .radio input[type="checkbox"] + label::before,
 .checkbox input[type="checkbox"] + label::before {
-  width: 0.346667rem;
-  height: 0.346667rem;
-  left: 0.053333rem;
-  top: 0.053333rem;
+  transform: scale(0.46666667);
 }
 .radio input[type="radio"]:checked + label::before,
 .checkbox input[type="radio"]:checked + label::before,
@@ -399,22 +487,23 @@ input[type=button] {
 .checkbox input[type="checkbox"]:checked + label::before {
   background-color: #000;
 }
-.checkbox input[type="checkbox"] {
-  width: 0.4rem;
-  height: 0.4rem;
-}
 .checkbox input[type="checkbox"] + label::after,
 .checkbox input[type="checkbox"] + label::before {
-  width: 0.4rem;
-  height: 0.4rem;
-  border-radius: 0.0625rem;
+  border-radius: 2px;
+}
+[data-dpr='2'] .checkbox input[type="checkbox"] + label::after,
+[data-dpr='2'] .checkbox input[type="checkbox"] + label::before {
+  border-radius: 4px;
+}
+[data-dpr='3'] .checkbox input[type="checkbox"] + label::after,
+[data-dpr='3'] .checkbox input[type="checkbox"] + label::before {
+  border-radius: 6px;
 }
 .checkbox input[type="checkbox"] + label::before {
   border: none;
+  transform: scale(0.8);
 }
 .checkbox input[type="checkbox"]:checked + label::before {
-  left: 0;
-  top: 0;
   background: url('../../assets/images/checkbox.png') no-repeat center center;
   background-size: contain;
 }
@@ -1117,6 +1206,7 @@ body {
 .checkall-wrap {
   position: relative;
   height: 1.2rem;
+  z-index: 9;
 }
 .checkall-wrap .checkall {
   position: fixed;
