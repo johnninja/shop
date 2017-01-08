@@ -94,6 +94,18 @@
 		}
 	}
 }
+table.table{
+	border: none;
+	border-collapse: collapse;
+	width: 100%;
+	td{
+		padding: 0.266667rem 0.333333rem;
+		.font-dpr(14px);
+	}
+	&.celled td{
+		border: 1px solid @border-color;
+	}
+}
 
 //hight-level components
 .header{
@@ -401,6 +413,7 @@
 	.tab{
 		flex: 1;
 		text-align: center;
+		.font-dpr(14px);
 		a{
 			padding: 0.266667rem 0;
 			display: block;
@@ -411,6 +424,12 @@
 		&.active{
 			border-bottom: 4px solid @red;
 		}
+	}
+}
+.tab-content{
+	display: none;
+	&.active{
+		display: block;
 	}
 }
 .cancel-reason{
