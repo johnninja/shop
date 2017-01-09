@@ -656,6 +656,9 @@ table.table.celled td {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 9999999;
 }
+.modal.active {
+  display: block;
+}
 .search {
   position: relative;
   display: inline-block;
@@ -2023,6 +2026,7 @@ body {
   width: 100%;
   background: #fff;
   border-top: 1px solid #bcbcbc;
+  z-index: 999;
 }
 .detail-footer-wrapper .detail-footer .detail-footer-icon {
   font-size: 0;
@@ -2051,4 +2055,41 @@ body {
 }
 .detail-footer-wrapper .detail-footer .detail-footer-buttons .button {
   padding: 0.2rem 0.266667rem;
+}
+.detail-footer-wrapper .modal {
+  z-index: 998;
+}
+.detail-footer-wrapper .modal .select-good-spec {
+  margin-bottom: 1.2rem;
+  background-color: #fff;
+}
+.detail-footer-wrapper .modal .select-good-spec .goods-section {
+  display: flex;
+}
+.detail-footer-wrapper .modal .select-good-spec .goods-section .feagure {
+  width: 1.92rem;
+  height: 1.92rem;
+  border-radius: 1.92rem;
+  border: 1px solid #bcbcbc;
+  overflow: hidden;
+}
+.detail-footer-wrapper .modal .select-good-spec .goods-section .feagure img {
+  width: 100%;
+  height: 100%;
+}
+.detail-footer-wrapper .modal .select-good-spec .goods-section .summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+.detail-footer-wrapper .modal .select-good-spec .goods-section .summary p {
+  font-size: 14px;
+  color: #717171;
+}
+[data-dpr="2"] .detail-footer-wrapper .modal .select-good-spec .goods-section .summary p {
+  font-size: 28px;
+}
+[data-dpr="3"] .detail-footer-wrapper .modal .select-good-spec .goods-section .summary p {
+  font-size: 42px;
 }
