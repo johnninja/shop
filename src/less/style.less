@@ -55,13 +55,14 @@ body{
 		width: 100%;
 	}
 }
-#scroll-wrapper{
+#scroll-wrapper,#list-wrapper{
 	position: absolute;
 	top: 0;
 	left: 0;
 	bottom: 1.2rem;
 	width: 100%;
 	overflow: hidden;
+	z-index: 2;
 }
 .content{
 	max-width: 10.0rem;
@@ -767,29 +768,186 @@ body{
 		.select-good-spec{
 			margin-bottom: 1.2rem;
 			background-color: #fff;
+			position: absolute;
+		    width: 100%;
+		    bottom: 0;
+		    left: 0;
+		    transform: translateY(1000px);
+		    transition: transform 0.2s;
+		    &.active{
+		    	transform: translateY(0);
+		    }
 			.goods-section{
+				position: relative;
+				margin-top: -0.613333rem;
+				padding: 0 0.266667rem 0.266667rem;
 				display: flex;
+				border-bottom: 1px solid lighten(@border-color, 10%);
 				.feagure{
-					width: 1.92rem;
-					height: 1.92rem;
-					border-radius: 1.92rem;
+					width: 2.826667rem;
+					height: 2.826667rem;
+					border-radius: 2.826667rem;
 					border: 1px solid @border-color;
 					overflow: hidden;
+					background: #fff;
 					img{
 						width: 100%;
 						height: 100%;
 					}
 				}
 				.summary{
+					margin-left: 0.533333rem;
 					display: flex;
 					flex-direction: column;
-					justify-content: center;
+					justify-content: flex-end;
 					flex: 1;
+					strong{
+						margin-bottom: 0.266667rem;
+						.font-dpr(16px);
+						color: @red;
+						font-weight: bold;
+						sub{
+							bottom: 0;
+						}
+					}
 					p{
+						margin-bottom: 0.133333rem;
 						.font-dpr(14px);
 						color: @dark-gray;
 					}
 				}
+				b.close-icon{
+					position: absolute;
+					right: 0.266667rem;
+					top: 0.88rem;
+					width: 0.533333rem;
+					height: 0.533333rem;
+					background: url('@{imgPath}/close.png') no-repeat center center;
+					background-size: cover;
+				}
+			}
+			.p-color, .p-height{
+				padding: 0.266667rem 0.266667rem 0.533333rem 0.266667rem;
+				border-bottom: 1px solid lighten(@border-color, 10%);
+				&>p{
+					margin-bottom: 0.266667rem;
+					.font-dpr(14px);
+				}
+				.p-button-group{
+					margin-left: -0.266667rem;
+				}
+				.button{
+					margin: 0.133333rem 0 0.133333rem 0.266667rem;
+					padding: 0.2rem 0.533333rem;
+					color: @dark-gray;
+					background: #ededed;
+					&.red{
+						color: #fff;
+						background: @red;
+					}
+				}
+			}
+			.p-height{
+				.button{
+					padding-left: 0.266667rem;
+					padding-right: 0.266667rem;
+				}
+			}
+			.p-amount{
+				padding: 0.533333rem 0.266667rem;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				p{
+					.font-dpr(14px);
+				}
+			}
+		}
+	}
+}
+.main-list{
+	.header {
+		.right{
+			i.icon-share{
+				display: block;
+				width: 1.4rem;
+				height: 1.4rem;
+				background: url('@{imgPath}/share.png') no-repeat center center;
+				background-size: 0.5rem;
+			}
+		}
+	}
+	.content{
+		.banner{
+			img{
+				width: 100%;
+			}
+		}
+		.summary-info{
+			padding: 0.266667rem;
+			max-height: 100%;
+			p{
+				line-height: 0.6rem;
+				.font-dpr(14px);
+				color: @dark-gray;
+			}
+		}
+		.tabs{
+			border-top: 1px solid @dark-gray;
+			.tab.active{
+				border: none;
+			}
+			.icon-sort, .icon-asc, .icon-desc{
+				display: inline-block;
+				width: 0.4rem;
+				height: 0.4rem;
+				background-image: url('@{imgPath}/sort.png');
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: cover;
+				vertical-align: middle;
+			}
+			.icon-asc{
+				background-image: url('@{imgPath}/asc.png');
+			}
+			.icon-desc{
+				background-image: url('@{imgPath}/desc.png');	
+			}
+		}
+		.products{
+			.product-content{
+				.product-header{
+					padding: 0.266667rem;
+				}
+				h2{
+					padding: 0.266667rem 0;
+					.font-dpr(16px);
+					font-weight: bold;
+					border-bottom: 1px solid @border-color;
+					small{
+						margin-left: 0.266667rem;
+						.font-dpr(14px);
+						color: @light-gray;
+					}
+				}
+				img{
+					width: 100%;
+					margin: 0 -0.266667rem;
+				}
+				.product-price{
+					padding: 0.266667rem;
+					display: flex;
+					justify-content: space-between;
+					.d-group{
+						.goods-detail .d-group();
+					}
+					.buy-btn{
+						a{
+							text-decoration: none;
+						}
+					}
+				}
+
 			}
 		}
 	}
