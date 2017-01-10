@@ -1154,6 +1154,33 @@ body {
   overflow: hidden;
   z-index: 2;
 }
+#scroll-wrapper .links {
+  display: flex;
+}
+#scroll-wrapper .links a {
+  padding: 0.466667rem;
+  flex: 1;
+}
+#scroll-wrapper .links a img {
+  max-width: 100%;
+  vertical-align: top;
+}
+#scroll-wrapper .home-pic img {
+  max-width: 100%;
+  vertical-align: top;
+}
+#scroll-wrapper .city-select-tab li,
+#scroll-wrapper .city-select-content a {
+  font-size: 14px;
+}
+[data-dpr="2"] #scroll-wrapper .city-select-tab li,
+[data-dpr="2"] #scroll-wrapper .city-select-content a {
+  font-size: 28px;
+}
+[data-dpr="3"] #scroll-wrapper .city-select-tab li,
+[data-dpr="3"] #scroll-wrapper .city-select-content a {
+  font-size: 42px;
+}
 .content {
   max-width: 10.0rem;
   margin-left: auto;
@@ -1634,11 +1661,23 @@ body {
   display: block;
   width: 1.96rem;
   height: 1.96rem;
+  line-height: 1.96rem;
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 50%;
 }
-.u-center .u-buttons .favor a img,
-.u-center .u-buttons .cart a img {
-  width: 100%;
-  height: 100%;
+.u-center .u-buttons .favor a i.iconfont,
+.u-center .u-buttons .cart a i.iconfont {
+  font-size: 30px;
+}
+[data-dpr="2"] .u-center .u-buttons .favor a i.iconfont,
+[data-dpr="2"] .u-center .u-buttons .cart a i.iconfont {
+  font-size: 60px;
+}
+[data-dpr="3"] .u-center .u-buttons .favor a i.iconfont,
+[data-dpr="3"] .u-center .u-buttons .cart a i.iconfont {
+  font-size: 90px;
 }
 .u-center .u-buttons .favor span,
 .u-center .u-buttons .cart span {
@@ -1664,20 +1703,27 @@ body {
   text-decoration: none;
   color: #000;
   border-right: 1px solid #bcbcbc;
-  font-size: 14px;
+  font-size: 12px;
   text-align: center;
 }
 [data-dpr="2"] .u-center .order-status a {
-  font-size: 28px;
+  font-size: 24px;
 }
 [data-dpr="3"] .u-center .order-status a {
-  font-size: 42px;
+  font-size: 36px;
 }
-.u-center .order-status a img {
+.u-center .order-status a span {
   display: block;
-  margin: 0.2rem auto 0;
-  width: 1.2rem;
-  height: 1.2rem;
+  margin-bottom: 0.093333rem;
+}
+.u-center .order-status a i.iconfont {
+  font-size: 30px;
+}
+[data-dpr="2"] .u-center .order-status a i.iconfont {
+  font-size: 60px;
+}
+[data-dpr="3"] .u-center .order-status a i.iconfont {
+  font-size: 90px;
 }
 .u-center .check-all-order a,
 .u-center .check-all-site a {
@@ -1694,6 +1740,18 @@ body {
 }
 [data-dpr="3"] .u-center .check-all-order a,
 [data-dpr="3"] .u-center .check-all-site a {
+  font-size: 42px;
+}
+.u-center .check-all-order a i.iconfont,
+.u-center .check-all-site a i.iconfont {
+  font-size: 14px;
+}
+[data-dpr="2"] .u-center .check-all-order a i.iconfont,
+[data-dpr="2"] .u-center .check-all-site a i.iconfont {
+  font-size: 28px;
+}
+[data-dpr="3"] .u-center .check-all-order a i.iconfont,
+[data-dpr="3"] .u-center .check-all-site a i.iconfont {
   font-size: 42px;
 }
 .confirm-order {
@@ -2189,7 +2247,7 @@ body {
 [data-dpr="3"] .detail-footer-wrapper .modal .select-good-spec .p-amount p {
   font-size: 42px;
 }
-.main-list .header .right i.icon-share {
+.share-header.header .right i.icon-share {
   display: block;
   width: 1.4rem;
   height: 1.4rem;
@@ -2306,4 +2364,212 @@ body {
 }
 .main-list .content .products .product-content .product-price .buy-btn a {
   text-decoration: none;
+}
+.payment-header .left {
+  padding-left: 0.266667rem;
+  width: auto;
+}
+.payment-header .left a > * {
+  font-size: 14px;
+  vertical-align: middle;
+}
+[data-dpr="2"] .payment-header .left a > * {
+  font-size: 28px;
+}
+[data-dpr="3"] .payment-header .left a > * {
+  font-size: 42px;
+}
+.payment-header .right {
+  font-size: 14px;
+}
+[data-dpr="2"] .payment-header .right {
+  font-size: 28px;
+}
+[data-dpr="3"] .payment-header .right {
+  font-size: 42px;
+}
+.payment .total-price {
+  padding: 1.333333rem 0;
+  text-align: center;
+}
+.payment .total-price span,
+.payment .total-price strong {
+  vertical-align: middle;
+}
+.payment .total-price span {
+  font-size: 16px;
+}
+[data-dpr="2"] .payment .total-price span {
+  font-size: 32px;
+}
+[data-dpr="3"] .payment .total-price span {
+  font-size: 48px;
+}
+.payment .total-price strong {
+  margin-left: 0.266667rem;
+  font-size: 18px;
+  font-weight: bold;
+  color: #d90116;
+}
+[data-dpr="2"] .payment .total-price strong {
+  font-size: 36px;
+}
+[data-dpr="3"] .payment .total-price strong {
+  font-size: 54px;
+}
+.payment .total-price strong sub {
+  bottom: 0;
+}
+.payment .title {
+  padding: 0.266667rem;
+  border-top: 1px solid #bcbcbc;
+  border-bottom: 1px solid #bcbcbc;
+  font-size: 14px;
+  background: #e7e7e7;
+}
+[data-dpr="2"] .payment .title {
+  font-size: 28px;
+}
+[data-dpr="3"] .payment .title {
+  font-size: 42px;
+}
+.payment .payment-ways {
+  padding: 0 0.266667rem;
+}
+.payment .payment-ways .wechat,
+.payment .payment-ways .alipay {
+  padding: 0.666667rem 0.266667rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #bcbcbc;
+}
+.payment .payment-ways .wechat-logo span,
+.payment .payment-ways .alipay-logo span {
+  font-size: 14px;
+  vertical-align: middle;
+}
+[data-dpr="2"] .payment .payment-ways .wechat-logo span,
+[data-dpr="2"] .payment .payment-ways .alipay-logo span {
+  font-size: 28px;
+}
+[data-dpr="3"] .payment .payment-ways .wechat-logo span,
+[data-dpr="3"] .payment .payment-ways .alipay-logo span {
+  font-size: 42px;
+}
+.payment .payment-ways .wechat-logo i,
+.payment .payment-ways .alipay-logo i {
+  margin-right: 0.133333rem;
+  display: inline-block;
+  width: 1.28rem;
+  height: 1.28rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  vertical-align: middle;
+}
+.payment .payment-ways .wechat-logo > i {
+  background-image: url('../../assets/images/wechat.png');
+}
+.payment .payment-ways .alipay-logo > i {
+  background-image: url('../../assets/images/alipay.png');
+}
+.payment .button {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 0;
+}
+.single .banner img {
+  width: 100%;
+}
+.single header.topic-title {
+  padding: 0.266667rem;
+}
+.single header.topic-title h2 {
+  font-size: 18px;
+  font-weight: bold;
+}
+[data-dpr="2"] .single header.topic-title h2 {
+  font-size: 36px;
+}
+[data-dpr="3"] .single header.topic-title h2 {
+  font-size: 54px;
+}
+.single header.topic-title p {
+  position: relative;
+  margin-top: 0.266667rem;
+  font-size: 12px;
+  color: #b3b3b3;
+}
+[data-dpr="2"] .single header.topic-title p {
+  font-size: 24px;
+}
+[data-dpr="3"] .single header.topic-title p {
+  font-size: 36px;
+}
+.single header.topic-title p::after {
+  margin-top: 0.266667rem;
+  display: block;
+  content: '';
+  width: 0.933333rem;
+  height: 0.026667rem;
+  background: #717171;
+}
+.single main.body {
+  padding: 0.333333rem 0.266667rem;
+}
+.single main.body p {
+  margin-bottom: 0.266667rem;
+  max-height: 100%;
+  text-indent: 0.533333rem;
+  letter-spacing: 0.013333rem;
+  line-height: 0.533333rem;
+  font-size: 14px;
+  color: #717171;
+}
+[data-dpr="2"] .single main.body p {
+  font-size: 28px;
+}
+[data-dpr="3"] .single main.body p {
+  font-size: 42px;
+}
+.single .bottom-favor-wrapper {
+  height: 1.333333rem;
+}
+.single .bottom-favor-wrapper .bottom-favor {
+  height: 1.333333rem;
+  line-height: 1.333333rem;
+  text-align: center;
+  border-top: 1px solid #bcbcbc;
+}
+.single .bottom-favor-wrapper .bottom-favor a {
+  padding: 0.133333rem 0;
+  display: inline-block;
+  width: 2.986667rem;
+  line-height: normal;
+  text-decoration: none;
+  color: #717171;
+  font-size: 14px;
+  border: 1px solid #bcbcbc;
+  border-radius: 0.08rem;
+}
+[data-dpr="2"] .single .bottom-favor-wrapper .bottom-favor a {
+  font-size: 28px;
+}
+[data-dpr="3"] .single .bottom-favor-wrapper .bottom-favor a {
+  font-size: 42px;
+}
+.single .bottom-favor-wrapper .bottom-favor a i,
+.single .bottom-favor-wrapper .bottom-favor a span {
+  vertical-align: bottom;
+}
+.single .bottom-favor-wrapper .bottom-favor a i.iconfont {
+  font-size: 14px;
+}
+[data-dpr="2"] .single .bottom-favor-wrapper .bottom-favor a i.iconfont {
+  font-size: 28px;
+}
+[data-dpr="3"] .single .bottom-favor-wrapper .bottom-favor a i.iconfont {
+  font-size: 42px;
 }

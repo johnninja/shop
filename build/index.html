@@ -8,10 +8,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Document</title>
 	<link rel="stylesheet" href="bower_components/swiper/dist/css/swiper.min.css">
-	<link rel="stylesheet" href="assets/javascripts/plugins/city-picker/citypicker.css">
+	<link rel="stylesheet" href="assets/javascripts/plugins/citylinkage-master/css/style.css">
 	<link rel="stylesheet" href="assets/styles/iconfont/iconfont.css">
 	<link rel="stylesheet" href="assets/styles/style.css">
-	<script type="text/javascript" src="http://localhost:1337/livereload.js"></script>
 	<script data-main="assets/javascripts/home.js" src="./bower_components/requirejs/require.js"></script>
 </head>
 <body>
@@ -21,6 +20,9 @@
 				<div class="left city pick-btn">
 					<a href="#">荔枝道·淄博</a>
 				</div>
+				<input class="cityhid" id="province" type="hidden">
+				<input class="cityhid" id="city" type="hidden">
+				<input class="cityhid" id="district" type="hidden">
 				<div class="title">
 					<div class="search">
 						<div class="icon"></div>
@@ -49,7 +51,22 @@
 		        <div class="swiper-pagination"></div>
 		    </div>
 			<div class="main">
-				<img src="./assets/images/homepage.jpg" alt="">
+				<div class="links">
+					<a href="#"><img src="assets/images/link1.png" alt=""></a>
+					<a href="#"><img src="assets/images/link2.png" alt=""></a>
+					<a href="#"><img src="assets/images/link3.png" alt=""></a>
+					<a href="#"><img src="assets/images/link4.png" alt=""></a>
+				</div>
+				<div class="home-pic">
+					<a href="#">
+						<img src="assets/images/home-pic.png" alt="">
+					</a>
+				</div>
+				<div class="home-pic">
+					<a href="#">
+						<img src="assets/images/home-pic2.png" alt="">
+					</a>
+				</div>
 			</div>
 			<div class="content">
 				<div class="floor-title">

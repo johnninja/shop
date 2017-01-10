@@ -64,6 +64,28 @@ body{
 	overflow: hidden;
 	z-index: 2;
 }
+#scroll-wrapper{
+	.links{
+		display: flex;
+		a{
+			padding: 0.466667rem;
+			flex: 1;
+			img{
+				max-width: 100%;
+				vertical-align: top;
+			}
+		}
+	}
+	.home-pic{
+		img{
+			max-width: 100%;
+			vertical-align: top;
+		}
+	}
+	.city-select-tab li,.city-select-content a{
+		.font-dpr(14px);
+	}
+}
 .content{
 	max-width: 10.0rem;
 	margin-left: auto;
@@ -446,9 +468,13 @@ body{
 				display: block;
 				width: 1.96rem;
 				height: 1.96rem;
-				img{
-					width: 100%;
-					height: 100%;
+				line-height: 1.96rem;
+				text-decoration: none;
+				color: @dark;
+				border: 1px solid @dark;
+				border-radius: 50%;
+				i.iconfont{
+					.font-dpr(30px);
 				}
 			}
 			span {
@@ -467,13 +493,14 @@ body{
 			text-decoration: none;
 			color: @dark;
 			border-right: 1px solid @border-color;
-			.font-dpr(14px);
+			.font-dpr(12px);
 			text-align: center;
-			img{
+			span{
 				display: block;
-				margin: 0.2rem auto 0;
-				width: 1.2rem;
-				height: 1.2rem;
+				margin-bottom: 0.093333rem;
+			}
+			i.iconfont{
+				.font-dpr(30px);
 			}
 		}
 	}
@@ -485,6 +512,9 @@ body{
 			text-decoration: none;
 			color: @dark;
 			.font-dpr(14px);
+			i.iconfont{
+				.font-dpr(14px);
+			}
 		}
 	}
 }
@@ -865,18 +895,18 @@ body{
 		}
 	}
 }
-.main-list{
-	.header {
-		.right{
-			i.icon-share{
-				display: block;
-				width: 1.4rem;
-				height: 1.4rem;
-				background: url('@{imgPath}/share.png') no-repeat center center;
-				background-size: 0.5rem;
-			}
+.share-header.header {
+	.right{
+		i.icon-share{
+			display: block;
+			width: 1.4rem;
+			height: 1.4rem;
+			background: url('@{imgPath}/share.png') no-repeat center center;
+			background-size: 0.5rem;
 		}
 	}
+}
+.main-list{
 	.content{
 		.banner{
 			img{
@@ -948,6 +978,151 @@ body{
 					}
 				}
 
+			}
+		}
+	}
+}
+.payment-header{
+	.left{
+		padding-left: 0.266667rem;
+		width: auto;
+		a>*{
+			.font-dpr(14px);
+			vertical-align: middle;
+		}
+	}
+	.right{
+		.font-dpr(14px);
+	}
+}
+.payment{
+	.total-price{
+		padding: 1.333333rem 0;
+		text-align: center;
+		span, strong{
+			vertical-align: middle;
+		}
+		span{
+			.font-dpr(16px);
+		}
+		strong{
+			margin-left: 0.266667rem;
+			.font-dpr(18px);
+			font-weight: bold;
+			color: @red;
+			sub{
+				bottom: 0;
+			}
+		}
+	}
+	.title{
+		padding: 0.266667rem;
+		border-top: 1px solid @border-color;
+		border-bottom: 1px solid @border-color;
+		.font-dpr(14px);
+		background: #e7e7e7;
+	}
+	.payment-ways{
+		padding: 0 0.266667rem;
+		.wechat, .alipay{
+			padding:  0.666667rem 0.266667rem;
+			display: flex;
+			align-items: center;
+			border-bottom: 1px solid @border-color;
+		}
+		.wechat-logo, .alipay-logo{
+			span{
+				.font-dpr(14px);
+				vertical-align: middle;
+			}
+			i{
+				margin-right: 0.133333rem;
+				display: inline-block;
+				width: 1.28rem;
+				height: 1.28rem;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+				vertical-align: middle;
+			}
+		}
+		.wechat-logo>i{
+			background-image: url('@{imgPath}/wechat.png');
+		}
+		.alipay-logo>i{
+			background-image: url('@{imgPath}/alipay.png');
+		}
+	}
+	.button{
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		border-radius: 0;
+	}
+}
+.single{
+	.banner{
+		img{
+			width: 100%;
+		}
+	}
+	header.topic-title{
+		padding:  0.266667rem;
+		h2{
+			.font-dpr(18px);
+			font-weight: bold;
+		}
+		p{
+			position: relative;
+			margin-top: 0.266667rem;
+			.font-dpr(12px);
+			color: @light-gray;
+			&::after{
+				margin-top: 0.266667rem;
+				display: block;
+				content: '';
+				width: 0.933333rem;
+				height: 0.026667rem;
+				background: @dark-gray;
+			}
+		}
+	}
+	main.body{
+		padding: 0.333333rem 0.266667rem;
+		p{
+			margin-bottom: 0.266667rem;
+			max-height: 100%;
+			text-indent: 0.533333rem;
+			letter-spacing: 0.013333rem;
+			line-height: 0.533333rem;
+			.font-dpr(14px);
+			color: @dark-gray;
+		}
+	}
+	.bottom-favor-wrapper{
+		height: 1.333333rem;
+		.bottom-favor{
+			height: 1.333333rem;
+			line-height: 1.333333rem;
+			text-align: center;
+			border-top: 1px solid @border-color;
+			a{
+				padding: 0.133333rem 0;
+				display: inline-block;
+				width: 2.986667rem;
+				line-height: normal;
+				text-decoration: none;
+				color: @dark-gray;
+				.font-dpr(14px);
+				border: 1px solid @border-color;
+				border-radius: 0.08rem;
+				i, span{
+					vertical-align: bottom;
+				}
+				i.iconfont{
+					.font-dpr(14px);
+				}
 			}
 		}
 	}
