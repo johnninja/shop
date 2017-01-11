@@ -14,6 +14,9 @@ body{
 .fr{
 	float: right;
 }
+.text-red{
+	color: @red;
+}
 
 .home-page.header{
 	height: 1.5625rem;
@@ -59,7 +62,7 @@ body{
 	position: absolute;
 	top: 0;
 	left: 0;
-	bottom: 1.2rem;
+	bottom: 1.4rem;
 	width: 100%;
 	overflow: hidden;
 	z-index: 2;
@@ -232,7 +235,7 @@ body{
 			color: inherit;
 			text-decoration: none;
 			&>*{
-				.font-dpr(16px);
+				.font-dpr(20px);
 			}
 		}
 		&.product-heart a{
@@ -242,15 +245,15 @@ body{
 }
 .checkall-wrap{
 	position: relative;
-	height: 1.2rem;
+	height: 1.333333rem;
 	z-index: 9;
 	.checkall{
 		position: fixed;
 		left: 0;
-		bottom: 1.2rem;
+		bottom: 1.4rem;
 		width: 100%;
-		height: 1.2rem;
-		line-height: 1.2rem;
+		height: 1.333333rem;
+		line-height: 1.333333rem;
 		background: #fff;
 		display: flex;
 		justify-content: space-between;
@@ -267,6 +270,9 @@ body{
 			text-align: right;
 			span, button{
 				vertical-align: middle;
+			}
+			.button{
+				padding: 0.266667rem 0.533333rem;
 			}
 		}
 	}
@@ -359,6 +365,9 @@ body{
 	&.footer{
 		padding: 0 0.266667rem;
 		justify-content: flex-end;
+		.button{
+			padding: 0.3rem 0.533333rem;
+		}
 	}
 	.cmt-content, .cmt-rate{
 		background: white;
@@ -401,7 +410,7 @@ body{
 	.button{
 		position: fixed;
 		left: 0;
-		bottom: 1.2rem;
+		bottom: 1.4rem;
 		width: 100%;
 		border-radius: 0;
 	}
@@ -420,11 +429,13 @@ body{
 				border-bottom: 1px solid @light-gray;
 			}
 			.field-th{
+				width: 2.4rem;
 				.font-dpr(14px);
+				white-space: nowrap;
 			}
 			.field-input{
 				input{
-					padding: 0.133333rem 0.2rem;
+					padding: 0.3rem 0.2rem;
 					width: 100%;
 					.font-dpr(14px);
 					border: 1px solid @border-color;
@@ -605,7 +616,7 @@ body{
 }
 .confirm-footer-wrapper{
 	position: relative;
-	height: 1.2rem;
+	height: 1.4rem;
 	.confirm-footer{
 		padding: 0 0.466667rem;
 		display: flex;
@@ -615,10 +626,10 @@ body{
 		left: 0;
 		bottom: 0;
 		width: 100%;
-		height: 1.2rem;
+		height: 1.4rem;
 		background: @light-gray;
 		.button{
-			padding: 0.2rem 0.666667rem;
+			padding: 0.3rem 0.666667rem;
 		}
 		.confirm-price{
 			.font-dpr(14px);
@@ -641,7 +652,7 @@ body{
 		}
 	}
 	.d-group{
-		padding: 0 0.266667rem;
+		padding: 0.266667rem 0.266667rem;
 		.d-group-wrapper{
 			padding-left: 0.266667rem;
 			border-left: 2px solid @border-color;
@@ -660,7 +671,7 @@ body{
 		}
 	}
 	.d-summary-info{
-		margin:0.2rem auto;
+		margin:0.4rem auto;
 		padding: 0 0.266667rem;
 		display: flex;
 		justify-content: space-between;
@@ -758,7 +769,7 @@ body{
 }
 .detail-footer-wrapper{
 	position: relative;
-	height: 1.2rem;
+	height: 1.4rem;
 	.detail-footer{
 		display: flex;
 		justify-content: space-between;
@@ -774,22 +785,22 @@ body{
 			font-size: 0;
 			a{
 				display: inline-block;
-				width: 1.2rem;
-				height: 1.2rem;
-				line-height: 1.2rem;
+				width: 1.4rem;
+				height: 1.4rem;
+				line-height: 1.4rem;
 				text-decoration: none;
 				color: @light-gray;
 				text-align: center;
 				border-right: 1px solid @border-color;
 				i.iconfont{
-					.font-dpr(20px);
+					.font-dpr(24px);
 				}
 			}
 		}
 		.detail-footer-buttons{
 			padding-right: 0.266667rem;
 			.button{
-				padding: 0.2rem 0.266667rem;
+				padding: 0.3rem 0.266667rem;
 			}
 		}
 	}
@@ -914,12 +925,25 @@ body{
 			}
 		}
 		.summary-info{
-			padding: 0.266667rem;
+			position: relative;
+			margin: 0.266667rem 0;
+			padding: 0 0.266667rem;
 			max-height: 100%;
+			height: 2.4rem;
+			overflow: hidden;
 			p{
 				line-height: 0.6rem;
 				.font-dpr(14px);
 				color: @dark-gray;
+			}
+			i.iconfont{
+				display: block;
+				height: 0.6rem;
+				width: 0.6rem;
+				position: absolute;
+				bottom: 0;
+				right: 0.266667rem;
+				background: url('@{imgPath}/bg.jpg');
 			}
 		}
 		.tabs{
@@ -1124,6 +1148,23 @@ body{
 					.font-dpr(14px);
 				}
 			}
+		}
+	}
+}
+.heighter.header, .share-header.header{
+	height: 1.4rem;
+	.title{
+		.search{
+			.icon{
+				height: 0.8rem;
+				top: 0;
+			}
+		}
+		input{
+			height: 0.8rem;
+			line-height: 0.8rem;
+			padding-top: 0.2rem;
+			padding-bottom: 0.2rem;
 		}
 	}
 }

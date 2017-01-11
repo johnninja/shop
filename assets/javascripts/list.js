@@ -1,5 +1,17 @@
 require(['./common'], function(){
 	require(['zepto','lib', 'IScroll' ], function($, lib, IScroll){
+		$('#list-wrapper').on('click', '.d-like', function(){
+			var star = $(this).find('i');
+			if (star.hasClass('text-red')) {
+				star.addClass('icon-xin1').removeClass('icon-xin5 text-red');
+			}else{
+				star.addClass('text-red icon-xin5').removeClass('icon-xin1');
+			}
+		});
+		$('#list-wrapper').on('click', '.icon-gengduo', function(){
+			$(this).parents('.summary-info').css('height', 'auto');
+			$(this).remove();
+		});
 		var myScroll;
 		var loading = $('.loader');
 		var testTemp = '<div class="product-content">' +
