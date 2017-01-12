@@ -9,8 +9,13 @@ require(['./common'], function(){
 			}
 		});
 		$('#list-wrapper').on('click', '.icon-gengduo', function(){
-			$(this).parents('.summary-info').css('height', 'auto');
-			$(this).remove();
+			if ($(this).hasClass('up')) {
+				$(this).parents('.summary-info').css('max-height', '2.4rem');
+				$(this).removeClass('up');
+			}else{
+				$(this).parents('.summary-info').css('max-height', '100%');
+				$(this).addClass('up');
+			}
 		});
 		var myScroll;
 		var loading = $('.loader');
@@ -20,6 +25,7 @@ require(['./common'], function(){
 				'</div>'+
 				'<div class="summary-info">'+
 					'<p>1976年1月，我到北京探亲，当时，周总理去世不久，人民自发的通过各种形式悼念总理，我亦自觉参与其中。今年是周总理逝世41周年，谨以小诗表达深深地怀念之情。1976年1月，我到北京探亲，当时，周总理去世不久，人民自发的通过各种形式悼念总理，我亦自觉参与其中。今年是周总理逝世41周年，谨以小诗表达深深地怀念之情。</p>'+
+					'<i class="iconfont icon-gengduo"></i>'+
 				'</div>'+
 				'<div class="product-banner"><img src="./assets/images/banner.jpg" alt=""></div>'+
 				'<div class="product-price">'+
@@ -82,6 +88,11 @@ require(['./common'], function(){
 			}, 2000);
 		}
 		initScroll();
+
 		setTimeout(myScroll.refresh.bind(myScroll),400);
+		//返回顶部
+		$('.back-top').click(function(e){
+			myScroll.scrollToElement($('.header').get(0));
+		});
 	});
 });

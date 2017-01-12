@@ -106,7 +106,48 @@ table.table{
 		border: 1px solid @border-color;
 	}
 }
-
+.back-top{
+	position: fixed;
+	bottom: 1.6rem;
+	right: 0.266667rem;
+	width: 1.333333rem;
+	height: 1.333333rem;
+	border-radius: 1.333333rem;
+	border: 1px solid @red-gray;
+	background-color: rgba(255, 255, 255, 0.5);
+	text-align: center;
+	box-sizing: border-box;
+	z-index: 999;
+	.icon-top{
+		margin: 0 auto;
+		width: 0.853333rem;
+		height: 0.666667rem;
+		background: url('@{imgPath}/top.png') no-repeat center center;
+		background-size: 0.666667rem auto;
+	}
+	p{
+		.font-dpr(12px);
+	}
+}
+.toast{
+	display: none;
+	position: fixed;
+	bottom: 1.6rem;
+	left: 50%;
+	margin-left: -1.666667rem;
+	display: inline-block;
+	padding: 0.266667rem 0;
+	width: 3.333333rem;
+	background-color: rgba(0, 0, 0, 0.7);
+	text-align: center;
+	color: #fff;
+	border-radius: 0.266667rem;
+	.font-dpr(14px);
+	z-index: 999;
+	&.show{
+		display: block;
+	}
+}
 //hight-level components
 .header{
 	display: flex;
