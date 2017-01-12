@@ -2158,6 +2158,7 @@ body {
   font-size: 0;
 }
 .detail-footer-wrapper .detail-footer .detail-footer-icon a {
+  position: relative;
   display: inline-block;
   width: 1.4rem;
   height: 1.4rem;
@@ -2175,6 +2176,27 @@ body {
 }
 [data-dpr="3"] .detail-footer-wrapper .detail-footer .detail-footer-icon a i.iconfont {
   font-size: 72px;
+}
+.detail-footer-wrapper .detail-footer .detail-footer-icon a b.badge {
+  padding: 0.04rem;
+  position: absolute;
+  right: 0.026667rem;
+  top: 0.026667rem;
+  min-width: 0.4rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  border-radius: 0.4rem;
+  background: #b01f24;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  box-sizing: content-box;
+}
+[data-dpr="2"] .detail-footer-wrapper .detail-footer .detail-footer-icon a b.badge {
+  font-size: 24px;
+}
+[data-dpr="3"] .detail-footer-wrapper .detail-footer .detail-footer-icon a b.badge {
+  font-size: 36px;
 }
 .detail-footer-wrapper .detail-footer .detail-footer-buttons {
   padding-right: 0.266667rem;

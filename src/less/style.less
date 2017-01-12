@@ -784,6 +784,7 @@ body{
 		.detail-footer-icon{
 			font-size: 0;
 			a{
+				position: relative;
 				display: inline-block;
 				width: 1.4rem;
 				height: 1.4rem;
@@ -794,6 +795,21 @@ body{
 				border-right: 1px solid @border-color;
 				i.iconfont{
 					.font-dpr(24px);
+				}
+				b.badge{
+					padding: 0.04rem;
+					position: absolute;
+					right: 0.026667rem;
+					top: 0.026667rem;
+					min-width: 0.4rem;
+					height: 0.4rem;
+					line-height: 0.4rem;
+					border-radius: 0.4rem;
+					background: @red;
+					color: #fff;
+					.font-dpr(12px);
+					text-align: center;
+					box-sizing: content-box;
 				}
 			}
 		}

@@ -20,7 +20,7 @@ require(['./common'], function(){
 		var newComBox = new Compute({
 			minus: $('.compute-box .minus'),
 			plus: $('.compute-box .plus'),
-			shower: $('.compute-box .shower')
+			shower: $('.compute-box .shower, .detail-footer-icon .badge')
 		});
 		newComBox.init();
 		$('.detail-footer-buttons .button').click(function(e){
