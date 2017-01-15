@@ -288,6 +288,8 @@ input[type=button] {
   font-size: 14px;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  text-align: center;
 }
 [data-dpr="2"] .button {
   font-size: 28px;
@@ -574,7 +576,6 @@ table.table.celled td {
   bottom: 1.6rem;
   left: 50%;
   margin-left: -1.666667rem;
-  display: inline-block;
   padding: 0.266667rem 0;
   width: 3.333333rem;
   background-color: rgba(0, 0, 0, 0.7);
@@ -582,7 +583,7 @@ table.table.celled td {
   color: #fff;
   border-radius: 0.266667rem;
   font-size: 14px;
-  z-index: 999;
+  z-index: 1002;
 }
 [data-dpr="2"] .toast {
   font-size: 28px;
@@ -591,7 +592,7 @@ table.table.celled td {
   font-size: 42px;
 }
 .toast.show {
-  display: block;
+  display: inline-block;
 }
 .header {
   display: flex;
@@ -1283,6 +1284,9 @@ body {
   color: #323232;
   text-decoration: none;
 }
+.brand .tabs .tab.active {
+  border-bottom: 0;
+}
 .brand .tabs .tab.active > a {
   color: #b01f24;
   border-bottom: 1px solid #b01f24;
@@ -1409,15 +1413,15 @@ body {
 }
 .product-list .product-delete a > *,
 .product-list .product-heart a > * {
-  font-size: 20px;
+  font-size: 25px;
 }
 [data-dpr="2"] .product-list .product-delete a > *,
 [data-dpr="2"] .product-list .product-heart a > * {
-  font-size: 40px;
+  font-size: 50px;
 }
 [data-dpr="3"] .product-list .product-delete a > *,
 [data-dpr="3"] .product-list .product-heart a > * {
-  font-size: 60px;
+  font-size: 75px;
 }
 .product-list .product-delete.product-heart a,
 .product-list .product-heart.product-heart a {
@@ -1449,6 +1453,7 @@ body {
   line-height: normal;
 }
 .checkall-wrap .checkall .check-price {
+  white-space: nowrap;
   text-align: right;
 }
 .checkall-wrap .checkall .check-price span,
@@ -2062,13 +2067,17 @@ body {
   font-size: 36px;
 }
 .goods-detail .tabs {
-  border-top: 1px solid #717171;
+  padding: 0;
+  border-top: 1px solid #b3b3b3;
 }
 .goods-detail .tabs .tab {
-  border-left: 1px solid #717171;
+  border-right: 1px solid #b3b3b3;
 }
 .goods-detail .tabs .tab:last-child {
-  border-right: 1px solid #717171;
+  border-right: none;
+}
+.goods-detail .tabs .tab a {
+  color: #717171;
 }
 .goods-detail .tab-content {
   margin-bottom: 1.333333rem;
@@ -2160,7 +2169,7 @@ body {
 .detail-footer-wrapper .detail-footer .detail-footer-icon a {
   position: relative;
   display: inline-block;
-  width: 1.4rem;
+  width: 1.7rem;
   height: 1.4rem;
   line-height: 1.4rem;
   text-decoration: none;
@@ -2205,10 +2214,9 @@ body {
   padding: 0.3rem 0.266667rem;
 }
 .detail-footer-wrapper .modal {
-  z-index: 998;
+  z-index: 1000;
 }
 .detail-footer-wrapper .modal .select-good-spec {
-  margin-bottom: 1.2rem;
   background-color: #fff;
   position: absolute;
   width: 100%;
@@ -2280,6 +2288,12 @@ body {
   height: 0.533333rem;
   background: url('../../assets/images/close.png') no-repeat center center;
   background-size: cover;
+}
+.detail-footer-wrapper .modal .select-good-spec a.button {
+  text-decoration: none;
+  width: 100%;
+  border-radius: 0;
+  text-align: center;
 }
 .detail-footer-wrapper .modal .select-good-spec .p-color,
 .detail-footer-wrapper .modal .select-good-spec .p-height {
@@ -2438,6 +2452,7 @@ body {
   padding: 0.266667rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .main-list .content .products .product-content .product-price .d-group {
   padding: 0.266667rem 0.266667rem;

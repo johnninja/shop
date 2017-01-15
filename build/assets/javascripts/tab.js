@@ -20,15 +20,39 @@ require(['./common'], function(){
 		var newComBox = new Compute({
 			minus: $('.compute-box .minus'),
 			plus: $('.compute-box .plus'),
-			shower: $('.compute-box .shower')
+			shower: $('.compute-box .shower, .detail-footer-icon .badge')
 		});
 		newComBox.init();
+
 		$('.detail-footer-buttons .button').click(function(e){
 			var modal = $('.modal');
 			modal.show();
-
+			if ($(this).hasClass('black')) {
+				$('.go-to-order').hide();
+				$('.add-to-cart').show();
+			}else{
+				$('.go-to-order').show();
+				$('.add-to-cart').hide();
+			}
 			setTimeout(function(){
 				modal.find('.select-good-spec').addClass('active');
+			}, 200);
+		});
+
+		var timer = null;
+		$('.add-to-cart').click(function(e){
+			e.preventDefault();
+			clearTimeout(timer);
+			$('.toast').addClass('show');
+			timer = setTimeout(function(){
+				$('.toast').removeClass('show');
+			}, 1000);
+
+			var modal = $('.modal');
+			
+			modal.find('.select-good-spec').removeClass('active');
+			setTimeout(function(){
+				modal.hide();
 			}, 200);
 		});
 		$('.select-good-spec').find('.close-icon').click(function(e){

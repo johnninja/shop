@@ -131,6 +131,9 @@ body{
 				color: #323232;
 				text-decoration: none;
 			}
+			&.active{
+				border-bottom: 0;
+			}
 			&.active > a {
 				color: @red;
 				border-bottom: 1px solid @red;
@@ -235,7 +238,7 @@ body{
 			color: inherit;
 			text-decoration: none;
 			&>*{
-				.font-dpr(20px);
+				.font-dpr(25px);
 			}
 		}
 		&.product-heart a{
@@ -267,6 +270,7 @@ body{
 			line-height: normal;
 		}
 		.check-price{
+			white-space: nowrap;
 			text-align: right;
 			span, button{
 				vertical-align: middle;
@@ -705,11 +709,15 @@ body{
 		}
 	}
 	.tabs{
-		border-top: 1px solid @dark-gray;
+		padding: 0;
+		border-top: 1px solid @light-gray;
 		.tab{
-			border-left: 1px solid @dark-gray;
+			border-right: 1px solid @light-gray;
 			&:last-child{
-				border-right: 1px solid @dark-gray;
+				border-right: none;
+			}
+			a{
+				color: @dark-gray;
 			}
 		}
 	}
@@ -786,7 +794,7 @@ body{
 			a{
 				position: relative;
 				display: inline-block;
-				width: 1.4rem;
+				width: 1.7rem;
 				height: 1.4rem;
 				line-height: 1.4rem;
 				text-decoration: none;
@@ -821,9 +829,8 @@ body{
 		}
 	}
 	.modal{
-		z-index: 998;
+		z-index: 1000;
 		.select-good-spec{
-			margin-bottom: 1.2rem;
 			background-color: #fff;
 			position: absolute;
 		    width: 100%;
@@ -882,6 +889,12 @@ body{
 					background: url('@{imgPath}/close.png') no-repeat center center;
 					background-size: cover;
 				}
+			}
+			a.button{
+				text-decoration: none;
+				width: 100%;
+				border-radius: 0;
+				text-align: center;
 			}
 			.p-color, .p-height{
 				padding: 0.266667rem 0.266667rem 0.533333rem 0.266667rem;
@@ -1010,6 +1023,7 @@ body{
 					padding: 0.266667rem;
 					display: flex;
 					justify-content: space-between;
+					align-items: center;
 					.d-group{
 						.goods-detail .d-group();
 					}
