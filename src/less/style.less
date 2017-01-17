@@ -661,9 +661,9 @@ body{
 			padding-left: 0.266667rem;
 			border-left: 2px solid @border-color;
 			color: @dark-gray;
-			.font-dpr(16px);
+			.font-dpr(20px);
 			.iconfont{
-				.font-dpr(16px);
+				.font-dpr(20px);
 				vertical-align: text-bottom;
 			}
 		}
@@ -671,6 +671,11 @@ body{
 			color: @red;
 			sub{
 				bottom: 0;
+			}
+		}
+		.d-like{
+			.icon-xin5{
+				color: @red;
 			}
 		}
 	}
@@ -798,11 +803,10 @@ body{
 				height: 1.4rem;
 				line-height: 1.4rem;
 				text-decoration: none;
-				color: @light-gray;
+				color: @dark-gray;
 				text-align: center;
-				border-right: 1px solid @border-color;
 				i.iconfont{
-					.font-dpr(24px);
+					.font-dpr(28px);
 				}
 				b.badge{
 					padding: 0.04rem;
@@ -957,22 +961,22 @@ body{
 			position: relative;
 			margin: 0.266667rem 0;
 			padding: 0 0.266667rem;
-			max-height: 2.4rem;
 			overflow: hidden;
+			.box1{
+	
+			}
+			.box2{
+				display: none;
+			}
 			p{
 				line-height: 0.6rem;
 				.font-dpr(14px);
 				color: @dark-gray;
 			}
 			i.iconfont{
-				display: block;
-				height: 0.6rem;
-				width: 0.6rem;
-				position: absolute;
-				bottom: 0;
-				right: 0.266667rem;
+				display: inline-block;
 				.font-dpr(14px);
-				background: url('@{imgPath}/bg.jpg');
+				text-align: left;
 				&.up{
 					transform: rotate(180deg);
 				}
@@ -1026,6 +1030,15 @@ body{
 					align-items: center;
 					.d-group{
 						.goods-detail .d-group();
+						.d-group-wrapper{
+							.font-dpr(20px);
+							.d-like{
+								.font-dpr(14px);
+							}
+							i.iconfont{
+								.font-dpr(20px);
+							}
+						}
 					}
 					.buy-btn{
 						a{

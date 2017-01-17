@@ -9,12 +9,14 @@ require(['./common'], function(){
 			}
 		});
 		$('#list-wrapper').on('click', '.icon-gengduo', function(){
-			if ($(this).hasClass('up')) {
-				$(this).parents('.summary-info').css('max-height', '2.4rem');
-				$(this).removeClass('up');
+			var oParent = $(this).parents('.summary-info');
+			var isUp = $(this).hasClass('up');
+			if (isUp) {
+				oParent.find('.box1').show();
+				oParent.find('.box2').hide();
 			}else{
-				$(this).parents('.summary-info').css('max-height', '100%');
-				$(this).addClass('up');
+				oParent.find('.box1').hide();
+				oParent.find('.box2').show();
 			}
 		});
 		var myScroll;
@@ -24,8 +26,12 @@ require(['./common'], function(){
 					'<h2>生·瓷器<small>手工艺术</small></h2>'+
 				'</div>'+
 				'<div class="summary-info">'+
-					'<p>1976年1月，我到北京探亲，当时，周总理去世不久，人民自发的通过各种形式悼念总理，我亦自觉参与其中。今年是周总理逝世41周年，谨以小诗表达深深地怀念之情。1976年1月，我到北京探亲，当时，周总理去世不久，人民自发的通过各种形式悼念总理，我亦自觉参与其中。今年是周总理逝世41周年，谨以小诗表达深深地怀念之情。</p>'+
-					'<i class="iconfont icon-gengduo"></i>'+
+					'<div class="box1">'+
+						'<p>1976年1月，我到北京探亲，当时，周总理去世不久，人民自发的通过各种形式悼念总理，我亦自觉参与其中。今年是周总理逝世41周年，谨以小诗表达深深地怀念之情。<i class="iconfont icon-gengduo"></i></p>'+
+					'</div>'+
+					'<div class="box2">'+
+						'<p>1976年1月，我到北京探亲，当时，周总理去世不久，人民自发的通过各种形式悼念总理，我亦自觉参与其中。今年是周总理逝世41周年，谨以小诗表达深深地怀念之情。1976年1月，我到北京探亲，当时，周总理去世不久，人民自发的通过各种形式悼念总理，我亦自觉参与其中。今年是周总理逝世41周年，谨以小诗表达深深地怀念之情。<i class="iconfont icon-gengduo up"></i></p>'+
+					'</div>'+
 				'</div>'+
 				'<div class="product-banner"><img src="./assets/images/banner.jpg" alt=""></div>'+
 				'<div class="product-price">'+

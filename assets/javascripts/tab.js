@@ -1,5 +1,14 @@
 require(['./common'], function(){
 	require(['zepto','./modules/compute'], function($, Compute){
+		$('.d-like').click(function(e){
+			var heart = $(this).find('.iconfont');
+			if (heart.hasClass('icon-xin5')) {
+				heart.removeClass('icon-xin5').addClass('icon-xin1');
+			}else{
+				heart.removeClass('icon-xin1').addClass('icon-xin5');
+			}
+		});
+		//切换
 		$('.tabs .tab').click(function(){
 			var index = $(this).index();
 			$(this).parent().find('.tab').removeClass('active').eq(index).addClass('active');
@@ -16,7 +25,7 @@ require(['./common'], function(){
 			heights.removeClass('red');
 			$(this).addClass('red');
 		});
-
+		//加减商品
 		var newComBox = new Compute({
 			minus: $('.compute-box .minus'),
 			plus: $('.compute-box .plus'),
